@@ -36,7 +36,7 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 #---------
 
 
-
+gem 'sassc'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

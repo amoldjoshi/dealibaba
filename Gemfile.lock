@@ -801,7 +801,6 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    duktape (2.0.1.0)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.10.0-x64-mingw32)
@@ -954,7 +953,6 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise (~> 4.6, >= 4.6.2)
-  duktape
   image_processing (~> 1.2)
   jbuilder (~> 2.5)
   jquery-ui-rails (~> 6.0, >= 6.0.1)
@@ -963,6 +961,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.2, >= 5.2.2.1)
   sass-rails (~> 5.0)
+  sassc
   selenium-webdriver
   simple_form (~> 4.1)
   sqlite3!
