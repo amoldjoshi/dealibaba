@@ -22,7 +22,7 @@ end
 #Amol added following gems-----
 gem 'cancancan', '~> 2.3'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'simple_form', '~> 4.1'
 gem 'popper_js', '~> 1.14', '>= 1.14.5'
 gem 'tether-rails', '~> 1.4'
