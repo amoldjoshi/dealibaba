@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealerid:</strong>
+  <%= @dealer.dealerid %>
+</p>
+
+<p>
+  <strong>Dealername:</strong>
+  <%= @dealer.dealername %>
+</p>
+
+<p>
+  <strong>Dealerurl:</strong>
+  <%= @dealer.dealerurl %>
+</p>
+
+<p>
+  <strong>Dealertype:</strong>
+  <%= @dealer.dealertype %>
+</p>
+
+<%= link_to 'Edit', edit_dealer_path(@dealer) %> |
+<%= link_to 'Back', dealers_path %>

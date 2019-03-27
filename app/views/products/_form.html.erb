@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :productid %>
+    <%= f.input :productname %>
+    <%= f.input :producturl %>
+    <%= f.input :producttype %>
+    <%= f.input :productprice %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
