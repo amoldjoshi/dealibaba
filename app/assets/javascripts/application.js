@@ -16,7 +16,6 @@
 //= require_tree .
 
 //= require jquery-ui
-//= require jquery_ujs
 //= require popper
 //= require tether
 //= require bootstrap
