@@ -20,5 +20,12 @@
   <%= @dealer.dealertype %>
 </p>
 
+<p>
+  <strong>Logo:</strong>
+  <%- if @dealer.logo.attached? %>
+  	<%= image_tag @dealer.logo %>
+  <%- end %>
+</p>
+
 <%= link_to 'Edit', edit_dealer_path(@dealer) %> |
 <%= link_to 'Back', dealers_path %>
