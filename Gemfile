@@ -18,6 +18,10 @@ group :production do
 end
 #--------end1
 
+group :development do
+ gem 'better_errors', '~> 2.5', '>= 2.5.1'
+ gem 'binding_of_caller', '~> 0.8.0'
+end
 
 #Amol added following gems-----
 gem 'cancancan', '~> 2.3'
@@ -26,6 +30,10 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'simple_form', '~> 4.1'
 gem 'popper_js', '~> 1.14', '>= 1.14.5'
 gem 'tether-rails', '~> 1.4'
+
+#Amol added the cmment for the gemfile from the golfcourse westchester.
+gem 'image_processing', '~> 1.2'
+
 #----end
 
 #Amol added following gems.....
