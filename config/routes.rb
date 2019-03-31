@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :contacts
+  resources :abouts
   resources :products
   resources :dealers
   devise_for :users
