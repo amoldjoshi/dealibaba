@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <strong>Productpicture:</strong>
+  <%- if @product.picture.attached? %>
+    <%= image_tag @product.picture %>
+    <%= image_tag url_for(@product.picture) %>
+  <%- end %>
+</p>
+
 <p>
   <strong>Productid:</strong>
   <%= @product.productid %>
@@ -25,13 +34,6 @@
   <%= @product.productprice %>
 </p>
 
-<p>
-  <strong>Productpicture:</strong>
-  <%- if @product.picture.attached? %>
-    <%= image_tag @product.picture %>
-    <%= image_tag url_for(@product.picture) %>
-  <%- end %>
-</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

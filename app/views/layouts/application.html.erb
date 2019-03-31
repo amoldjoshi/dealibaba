@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= favicon_link_tag 'dealibabahd.png'%>
     <title>Dealibaba</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/google_analytics' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="row">
+      <%= render 'shared/navbar'%>
+      <%= render 'shared/alerts'%>
+    </div> 
+
+  <div class="container-fluid">
+      <%= yield %>
+  </div>
+
+  <div class="row">
+      <%= render 'shared/footer'%> 
+  </div>
   </body>
 </html>
