@@ -1,0 +1,48 @@
+
+  <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+  <!--<a class="navbar-brand" href="#">DEalibaba.com</a>-->
+  <div>
+            <% logo = image_tag("dealibabalogo.png", :alt => "dealibaba.com") %>
+            <%= link_to logo, root_path %>
+            </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav nav-pills">
+        <li class="nav-item active">
+          <li class="nav-item">
+            <%= link_to 'Products', root_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Dealers', dealers_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a><%=  link_to 'About', abouts_path %></a>
+                <div class="dropdown-divider"></div>
+              <a><%=  link_to 'Contact', contacts_path %></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <% if user_signed_in? %>
+                <a class="dropdown-item" href="#"><%= link_to('My Account', edit_user_registration_path) %></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></a>
+                <div class="dropdown-divider"></div>
+              <% else %>
+                <a class="dropdown-item" href="#"><%= link_to("Sign in", new_user_session_path) %></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><%= link_to("Sign up", new_user_registration_path) %></a>
+              <% end %>
+            </div>
+          </li>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

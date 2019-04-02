@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-expand-lg sticky-bottom navbar-dark bg-dark">
+  <!--<a class="navbar-brand" href="#">DEalibaba.com</a>-->
+  <div>
+    <% logo = image_tag("dealibabalogo.png", :alt => "dealibaba.com") %>
+    <%= link_to logo, root_path %>
+  </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="nav nav-pills">
+      <li class="nav-item active">
+        <li class="nav-item">
+          <li class="nav-item ">
+            <%= link_to 'Products', root_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Dealers', dealers_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'About', abouts_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Contact', contacts_path, class: 'navbar-brand' %>
+          </li>
+      </li>
+
+      <div class = "span8 text-right">
+	    <%= image_tag("facebook.png", :size => "40x40", :alt => "dealibaba.com")%>
+	    <%= image_tag("twitter.png",  :size => "40x40", :alt => "dealibaba.com")%>
+	    <%= image_tag("google.png",   :size => "40x40", :alt => "dealibaba.com")%>
+	    <%= image_tag("pinterest.png",:size => "40x40", :alt => "dealibaba.com")%>
+	    <%= image_tag("mail.png",     :size => "40x40", :alt => "dealibaba.com")%>
+	  </div>
+    </ul>
+  </div>
+ </nav>
