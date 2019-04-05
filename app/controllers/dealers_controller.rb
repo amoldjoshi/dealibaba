@@ -8,6 +8,21 @@ class DealersController < ApplicationController
     @dealers = Dealer.all
   end
 
+    # GET /products/dailydeals
+  def dailydeals
+      @dealers = Dealer.all
+  end
+
+    # GET /products/dailydeals
+  def finders
+      @dealers = Dealer.all
+  end
+
+  # GET /products/weeklyadds
+  def weeklyadds
+    @dealers = Dealer.all
+  end
+
   # GET /dealers/1
   # GET /dealers/1.json
   def show

@@ -1,17 +1,19 @@
-
 <%= simple_form_for(@dealer) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :dealerid %>
-    <%= f.input :dealername %>
-    <%= f.input :dealerurl %>
-    <%= f.input :dealertype %>
-    <%= f.input :logo %>
-  </div>
+  <div class="newform-box">
+    <div class = "container">
+      <div class="form-inputs">
+        <%= f.input :dealerid %>
+        <%= f.input :dealername %>
+        <%= f.input :dealerurl %>
+        <%= f.input :dealertype %>
+        <%= f.input :logo %>
+      </div>
+    </div><!--end container-->
+  </div><!--end newform-box input-->
+  
+  <div class="form-actions"><%= f.button :submit %></div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
 <% end %>
