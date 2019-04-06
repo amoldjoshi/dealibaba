@@ -19,3 +19,5 @@
 //= require popper
 //= require tether
 //= require bootstrap
+
+//=require jquery3
