@@ -11,21 +11,24 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--Amol added this line -->
-    <%= render 'shared/alerts'%>
+
   </head>
 
   <body>
-    <div class="row">
+    <div class="container-fluid">
+      <div class="row">
+        <%= render 'shared/navbar'%>
+        <%= render 'shared/alerts'%>
+      </div> 
 
-      <%= render 'shared/navbar'%>
-    </div> 
+      <div class="row">
+        <%= yield %>
+      </div>
 
-  <div class="container-fluid">
-      <%= yield %>
-  </div>
-
-  <div class="row">
-      <%= render 'shared/footer'%> 
-  </div>
+      <div class="row">
+        <%= render 'shared/footer'%> 
+      </div>
+      
+    </div>
   </body>
 </html>

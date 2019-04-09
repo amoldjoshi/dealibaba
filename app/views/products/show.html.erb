@@ -4,7 +4,6 @@
 <p>
   <strong>Productpicture:</strong>
   <%- if @product.picture.attached? %>
-    <%= image_tag @product.picture %>
     <%= image_tag url_for(@product.picture) %>
   <%- end %>
 </p>
