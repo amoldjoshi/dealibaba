@@ -12,8 +12,22 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="nav nav-pills">
         <li class="nav-item active">
-          <li class="nav-item"><%= link_to 'Products', root_path, class: 'navbar-brand' %></li>
-          <li class="nav-item"><%= link_to 'Dealers', dealers_path, class: 'navbar-brand' %></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Innovations</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a><%=  link_to 'Innovations', products_path %></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse Deals</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a><%=  link_to 'Weekly Adds', weeklyadds_path %></a>
+              <div class="dropdown-divider"></div>
+              <a><%=  link_to 'Deal Finders', finders_path %></a>
+              <div class="dropdown-divider"></div>
+              <a><%=  link_to 'Daily Deals', dailydeals_path %></a>
+            </div>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
