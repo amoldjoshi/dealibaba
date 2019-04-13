@@ -3,9 +3,9 @@
 <div class="container">
   <div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>
 
-  <div class="row mb-3">
+  <div class="row mb-4">
     <% @products.each do |product| %>
-    <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
+    <div class="card border-primary bg-light mb-4" style="max-width: 18rem;">
       <div class="card-header">
         <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
       </div>
