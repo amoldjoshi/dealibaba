@@ -10,7 +10,8 @@
         <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
       </div>
       <div class="card-body"> 
-        <img class="card-img-top" src= "<picture><%= image_tag(product.picture, class: 'fit-image') %></picture>" alt="Card image cap">
+        <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
+        <picture><%= image_tag(product.picture, class: 'fit-image') %></picture>
         <div class="dropdown-divider"></div>
         <h5 class="card-text"><%= product.productname %> </h5>
         <div class="dropdown-divider"></div>

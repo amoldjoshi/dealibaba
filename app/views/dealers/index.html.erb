@@ -1,4 +1,8 @@
+
 <%- model_class = Dealer -%>
+<div class="container">
+  <div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>
+
 <div class="container-fluid">
   <div class="row mb-2">
     <% @dealers.each do |dealer| %>
@@ -7,9 +11,10 @@
         <%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %>
       </div>
       <div class="card-body"> 
-        <img class="card-img-top" src= "<picture><%= image_tag(dealer.logo, class: 'fit-image') %></picture>" alt="Card image cap">
+        <picture><%= image_tag(dealer.logo, class: 'fit-image') %></picture>
         <div class="dropdown-divider"></div>
         <h5 class="card-text"><%= dealer.dealername %> </h5>
+        <div class="dropdown-divider"></div>
         <h5 class="card-text"><%= dealer.dealertype %> </h5>
         <div class="dropdown-divider"></div>
         <div class="card-footer">
