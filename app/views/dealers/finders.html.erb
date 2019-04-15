@@ -3,11 +3,12 @@
 <div class="container-fluid">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>-->
   <h1> Deal Finder: guys who list deals.</h1>
+
+  <div class="container-fluid">
   <div class="row mb-2">
     <% @dealers.each do |dealer| %>
       <% if dealer.dealertype == 2 %>
-        <div class = "col-2 mt-1 mb-2">
-          <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
+          <div class="card border-primary bg-light mb-2" style="max-width: 16rem;">
             <div class="card-header">
               <%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %>
             </div>
@@ -30,5 +31,5 @@
         </div>
       <% end %>
     <% end %>
-  </div>
 </div><!--container-fluid-->
+</div>
