@@ -1,6 +1,11 @@
 class DealersController < ApplicationController
-  load_and_authorize_resource
+  #load_and_authorize_resource
+  
+  before_action :authenticate_user!, :except => [:show, :index, :weeklyadds, :dailydeals, :finders]
+  
   before_action :set_dealer, only: [:show, :edit, :update, :destroy]
+
+  
 
   # GET /dealers
   # GET /dealers.json

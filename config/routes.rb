@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :dealers
   devise_for :users
   root to: 'products#index'
+
   get '/weeklyadds', to: "dealers#weeklyadds"
   get '/dailydeals', to: "dealers#dailydeals"
   get '/finders', to: "dealers#finders"
