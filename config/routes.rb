@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'products#index'
 
+  get '/innovations', to: "products#innovations"
   get '/weeklyadds', to: "dealers#weeklyadds"
   get '/dailydeals', to: "dealers#dailydeals"
   get '/finders', to: "dealers#finders"
