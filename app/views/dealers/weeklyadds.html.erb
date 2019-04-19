@@ -2,11 +2,12 @@
 
 <div class="container-fluid">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>-->
-  <h1> Deal Finder: guys who list deals.</h1>
+  <!--<h1> Deal Finder: weekly papers.</h1>-->
 
   <div class="container-fluid">
   <div class="row mb-2">
     <% @dealers.each do |dealer| %>
+    <div class="col-md-2">
       <% if dealer.dealertype == 3 %>
           <div class="card border-primary bg-light mb-2" style="max-width: 16rem;">
             <div class="card-header">
@@ -15,7 +16,7 @@
           <div class="card-body"> 
             <picture><%= image_tag(dealer.logo, class: 'fit-logo') %></picture>
             <div class="dropdown-divider"></div>
-            <h5 class="card-text"><%= dealer.dealername %> </h5>
+            <p class="card-text"><%= dealer.dealername %> </p>
             <div class="card-footer">
               <p><a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(dealer.dealerurl),:target => :blank, :class => 'btn btn-warning')%></a></p>
             </div>
@@ -30,6 +31,7 @@
           </div>
         </div>
       <% end %>
+    </div>
     <% end %>
 </div><!--container-fluid-->
 </div>

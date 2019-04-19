@@ -1,11 +1,11 @@
-
 <%- model_class = Product -%>
 <div class="container">
-  <div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>
+  <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
 
-  <div class="row mb-4">
+  <div class="row mb-2">
     <% @products.each do |product| %>
-    <div class="card border-primary bg-light mb-4" style="max-width: 18rem;">
+    <div class="col-md-3">
+    <div class="card border-primary bg-light" style="max-width: 18rem;">
       <div class="card-header">
         <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
       </div>
@@ -13,7 +13,7 @@
         <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
         <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
         <div class="dropdown-divider"></div>
-        <h5 class="card-text"><%= product.productname %> </h5>
+        <p class="card-text"><%= product.productname %> </p>
         <div class="dropdown-divider"></div>
         <div class="card-footer">
           <p><a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
@@ -30,6 +30,7 @@
         <%end%>
       </div>
     </div>
+  </div>
     <% end %>
   </div><!--finished row-->
 </div><!--finished container-->

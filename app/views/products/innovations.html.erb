@@ -1,34 +1,39 @@
 <%- model_class = Product -%>
 <div class="container">
-  <div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>
+  <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
 
-  <div class="row mb-4">
-    <% @products.each do |product| %>
-    <div class="card border-primary bg-light mb-4" style="max-width: 18rem;">
-      <div class="card-header">
-        <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
+  <div class="container">
+    <div class="row mb-2">
+      <% @products.each do |product| %>
+      <div class="col-md-3">
+        <div class="card border-primary bg-light mb-4" style="max-width: 18rem;">
+          <div class="card-header">
+            <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
+          </div>
+      
+          <div class="card-body"> 
+            <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
+            <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
+            <div class="dropdown-divider"></div>
+            <h5 class="card-text"><%= product.productname %> </h5>
+            <div class="dropdown-divider"></div>
+            <div class="card-footer">
+              <p><a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
+              <a class="float-right"><font size="3" color = #0000FF><%= number_to_currency(product.productprice, :unit => "$")%></font></a>
+              </p>
+            </div>
+          </div>
+          <div>
+            <% if can? :update, product %>
+              <%= link_to 'Show', product %> ||
+              <%= link_to 'Edit', edit_product_path(product) %> ||
+              <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
+              <%= link_to 'New product', new_product_path %>
+            <%end%>
+          </div>
+        </div>
       </div>
-      <div class="card-body"> 
-        <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
-        <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
-        <div class="dropdown-divider"></div>
-        <h5 class="card-text"><%= product.productname %> </h5>
-        <div class="dropdown-divider"></div>
-        <div class="card-footer">
-          <p><a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
-            <a class="float-right"><font size="3" color = #0000FF><%= number_to_currency(product.productprice, :unit => "$")%></font></a>
-           </p>
-         </div>
-      </div>
-      <div>
-        <% if can? :update, product %>
-          <%= link_to 'Show', product %> ||
-          <%= link_to 'Edit', edit_product_path(product) %> ||
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
-          <%= link_to 'New product', new_product_path %>
-        <%end%>
-      </div>
-    </div>
-    <% end %>
-  </div><!--finished row-->
+      <% end %>
+    </div><!--finished row-->
+  </div>
 </div><!--finished container-->
