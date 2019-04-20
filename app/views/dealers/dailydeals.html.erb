@@ -3,35 +3,33 @@
 <div class="container-fluid">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>-->
   <!--<h1> Deal Finder: weekly papers.</h1>-->
-
-  <div class="container-fluid">
-  <div class="row mb-2">
-    <% @dealers.each do |dealer| %>
-    <div class="col-md-2">
-      <% if dealer.dealertype == 1 %>
-          <div class="card border-primary bg-light mb-2" style="max-width: 16rem;">
-            <div class="card-header">
-              <%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %>
+    <div class="row mb-2">
+      <% @dealers.each do |dealer| %>
+        <div class="col-md-2">
+          <% if dealer.dealertype == 1 %>
+            <div class="card border-primary bg-light mb-2" style="max-width: 16rem;">
+              <div class="card-header">
+                <%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %>
+              </div>
+              <div class="card-body"> 
+                <picture><%= image_tag(dealer.logo, class: 'fit-logo') %></picture>
+                <div class="dropdown-divider"></div>
+                <p class="card-text"><%= dealer.dealername %> </p>
+              </div>
+              <div class="card-footer">
+                <p><a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(dealer.dealerurl),:target => :blank, :class => 'btn tn-warning')%></a></p>
+              </div>
             </div>
-          <div class="card-body"> 
-            <picture><%= image_tag(dealer.logo, class: 'fit-logo') %></picture>
-            <div class="dropdown-divider"></div>
-            <p class="card-text"><%= dealer.dealername %> </p>
-            <div class="card-footer">
-              <p><a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(dealer.dealerurl),:target => :blank, :class => 'btn btn-warning')%></a></p>
+            <div>
+              <% if can? :update, dealer %>
+                <%= link_to 'Show', dealer %> ||
+                <%= link_to 'Edit', edit_dealer_path(dealer) %> ||
+                <%= link_to 'Destroy', dealer, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New dealer', new_dealer_path %>
+              <%end%>
             </div>
-          </div>
-          <div>
-            <% if can? :update, dealer %>
-              <%= link_to 'Show', dealer %> ||
-              <%= link_to 'Edit', edit_dealer_path(dealer) %> ||
-              <%= link_to 'Destroy', dealer, method: :delete, data: { confirm: 'Are you sure?' } %>||
-              <%= link_to 'New dealer', new_dealer_path %>
-            <%end%>
-          </div>
+          <% end %>
         </div>
       <% end %>
-    </div>
-    <% end %>
-</div><!--container-fluid-->
+  </div><!--container-fluid-->
 </div>
