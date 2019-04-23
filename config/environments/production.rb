@@ -91,4 +91,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  Recaptcha.configure do |config|
+   config.public_key  = <%= SITE_PUBLIC_KEY %>
+   config.private_key = <%= SITE_SECRET_KEY %>
+  end
+
 end
