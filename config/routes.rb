@@ -7,8 +7,7 @@ Rails.application.routes.draw do
 
 
   #devise_for :users, controllers:{registrations: "registrations"}
-  devise_for :users, :controllers => {:registrations => "user/registrations"}
-
+  
   get '/innovations', to: "products#innovations"
   get '/weeklyadds', to: "dealers#weeklyadds"
   get '/dailydeals', to: "dealers#dailydeals"
