@@ -42,17 +42,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
 #amol added this from sitepoint.com
 def create
- if !verify_recaptcha
-    flash.delete :recaptcha_error
-    build_resource(sign_up_params)
-    resource.valid?
-    resource.errors.add(:base, "There was an error with the recaptcha code below. Please re-enter the code.")
-    clean_up_passwords(resource)
-    respond_with_navigational(resource) { render_with_scope :new }
-  else
-    flash.delete :recaptcha_error
-    super
-  end
+ if verify_recaptcha
+        super
+      else
+        build_resource
+        clean_up_passwords(resource)
+        flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
+        render_with_scope :new
+      end
+    end
 end
 
   # protected
