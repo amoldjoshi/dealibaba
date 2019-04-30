@@ -4,7 +4,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
-  prepend_before_action :check_captcha, only: [:create] # Change this to be any actions you want to protect.
+  prepend_before_action :check_captcha, only: [:create, :update] # Change this to be any actions you want to protect.
 
   # GET /resource/sign_up
   # def new
@@ -43,15 +43,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 #amol added this from sitepoint.com
 
 
-def create
-    if verify_recaptcha
-      super
-    else
-        flash.now[:error] = "Recaptcha cannot be blank; please try again"
-        render :new
-    end
-end
-
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -76,11 +67,10 @@ end
 
     private
     def check_captcha
-      unless verify_recaptcha
-        self.resource = resource_class.new sign_up_params
-        resource.validate # Look for any other validation errors besides Recaptcha
-        set_minimum_password_length
-        respond_with resource
-      end 
-    end
+            unless verify_recaptcha
+                self.resource = resource_class.new sign_up_params
+                resource.validate # Look for any other validation errors besides Recaptcha
+                respond_with_navigational(resource) { render :new }
+            end 
+        end
 end
