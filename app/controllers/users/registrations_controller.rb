@@ -8,6 +8,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #prepend_before_action :check_captcha, only: [:create, :update] # Change this to be any actions you want to protect.
   #Amol added this one.
 
+  #Amol changed render_with_scope :new to render :new
+
 def create
  if !verify_recaptcha
     flash.delete :recaptcha_error
