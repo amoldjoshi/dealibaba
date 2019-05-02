@@ -4,8 +4,23 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
-  prepend_before_action :check_captcha, only: [:create, :update] # Change this to be any actions you want to protect.
 
+  #prepend_before_action :check_captcha, only: [:create, :update] # Change this to be any actions you want to protect.
+  #Amol added this one.
+
+def create
+ if !verify_recaptcha
+    flash.delete :recaptcha_error
+    build_resource(sign_up_params)
+    resource.valid?
+    resource.errors.add(:base, "There was an error with the recaptcha code below. Please re-enter the code.")
+    clean_up_passwords(resource)
+    respond_with_navigational(resource) { render_with_scope :new }
+  else
+    flash.delete :recaptcha_error
+    super
+  end
+end
   # GET /resource/sign_up
   # def new
   #   super
@@ -65,12 +80,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 
-    private
-    def check_captcha
-            unless verify_recaptcha
-                self.resource = resource_class.new sign_up_params
-                resource.validate # Look for any other validation errors besides Recaptcha
-                respond_with_navigational(resource) { render :new }
-            end 
-        end
+    #private
+      #Amol added this one.
+    #def check_captcha
+    #        unless verify_recaptcha
+    #            self.resource = resource_class.new sign_up_params
+    #            resource.validate # Look for any other validation errors besides Recaptcha
+    #            respond_with_navigational(resource) { render :new }
+    #        end 
+    #    end
 end
