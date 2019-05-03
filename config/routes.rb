@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
 
   #devise_for :users, controllers:{registrations: "registrations"}
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   
   get '/innovations', to: "products#innovations"
   get '/weeklyadds', to: "dealers#weeklyadds"
@@ -14,10 +15,10 @@ Rails.application.routes.draw do
   get '/finders', to: "dealers#finders"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-    Rails.application.routes.draw do
-      devise_for :users
+    #Rails.application.routes.draw do
+     # devise_for :users
 
-    end
+    #end
 
 
 end
