@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   resources :dealers
   root to: 'products#index'
 
-
-  #devise_for :users, controllers:{registrations: "registrations"}
   devise_for :users, controllers: { registrations: 'users/registrations' }
   
   get '/innovations', to: "products#innovations"
@@ -14,11 +12,6 @@ Rails.application.routes.draw do
   get '/dailydeals', to: "dealers#dailydeals"
   get '/finders', to: "dealers#finders"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-    #Rails.application.routes.draw do
-     # devise_for :users
-
-    #end
 
 
 end
