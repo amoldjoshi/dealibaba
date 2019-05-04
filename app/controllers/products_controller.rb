@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  load_and_authorize_resource, :except => [:show, :index, :innovations]
+  load_and_authorize_resource, :except [:show, :index, :innovations]
   #before_action :authenticate_user!, :except => [:show, :index, :innovations]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
