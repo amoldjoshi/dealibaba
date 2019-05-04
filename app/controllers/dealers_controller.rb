@@ -1,5 +1,6 @@
 class DealersController < ApplicationController
-  load_and_authorize_resource, :except [:show, :index, :weeklyadds, :dailydeals, :finders]
+  load_and_authorize_resource
+  skip_authorize_resource :only => [ :weeklyadds, :dailydeals, :finders]
   
   #before_action :authenticate_user!, :except => [:show, :index, :weeklyadds, :dailydeals, :finders]
   
