@@ -16,7 +16,7 @@
           <p class="card-text"><%= product.productname %> </p>
         </div>
         <div class="card-footer">
-          <p><a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
+          <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
             <a class="float-right"><font size="3" color = #0000FF><%= number_to_currency(product.productprice, :unit => "$")%></font></a>
            </p>
         </div>
