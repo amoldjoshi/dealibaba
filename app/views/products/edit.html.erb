@@ -1,4 +1,4 @@
-<!--delete everything above this line -->
+
 <%- model_class = Product -%>
 
 <div class="page-header">
@@ -6,6 +6,11 @@
 		<%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %>
 	</h1>	
 </div>
-<%= render 'form', product: @product %>
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+
+<div class = "container">
+	<div><%= render 'form', product: @product %></div>
+	<DIV>
+	<p><%= link_to 'Show', @product %></p>
+	<p><%= link_to 'Back', products_path %></p>
+	</DIV>
+</div>

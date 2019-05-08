@@ -13,7 +13,7 @@
           <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
           <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
           <div class="dropdown-divider"></div>
-          <p class="card-text"><%= product.productname %> </p>
+          <p class="card-text"><%= product.productdescription %> </p>
         </div>
         <div class="card-footer">
           <p><a class="card-text"><%=  link_to( product.productbutton, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
