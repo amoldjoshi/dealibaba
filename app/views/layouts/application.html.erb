@@ -17,18 +17,14 @@
 
 <div class="container-fluid">
   <body>
+    <div class="row"><%= render 'shared/navbar'%></div>
     <div class="row">
-      <%= render 'shared/navbar'%>
+      <%= render 'shared/jumboproducts'%>
       <%= render 'shared/alerts'%>
-    </div> 
-
-    <div class="row">
-      <%= yield %>
     </div>
+    <div class="row"><%= yield %></div>
 
-    <div class="row">
-      <%= render 'shared/footer'%> 
-    </div>
+    <div class="row"><%= render 'shared/footer'%></div>
   </body>
 </div>
 </html>
