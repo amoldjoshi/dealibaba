@@ -14,6 +14,8 @@
           <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
           <div class="dropdown-divider"></div>
           <p class="card-text"><%= product.productdescription %> </p>
+          <div class="dropdown-divider"></div>
+          <p class="card-text"><%= link_to( 'Why I need it?', url_with_protocol(product.productresearch),:target => :blank) %> </p>
         </div>
         <div class="card-footer">
           <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>

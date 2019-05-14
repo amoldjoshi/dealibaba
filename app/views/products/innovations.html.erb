@@ -14,20 +14,14 @@
           <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
           <div class="dropdown-divider"></div>
           <p class="card-text"><%= product.productdescription %> </p>
+          <div class="dropdown-divider"></div>
+          <p class="h6"><%= link_to( 'WHY I NEED IT?', url_with_protocol(product.productresearch),:target => :blank) %> </p>
         </div>
         <div class="card-footer">
           <p><a class="card-text"><%=  link_to( product.productbutton, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
-            <a class="float-right"><font size="3" color = #0000FF><%= number_to_currency(product.productprice, :unit => "$")%></font></a>
+            <a class="float-right"><font size="3" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
            </p>
         </div>
-      </div>
-      <div>
-        <% if can? :update, product %>
-          <%= link_to 'Show', product %> ||
-          <%= link_to 'Edit', edit_product_path(product) %> ||
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
-          <%= link_to 'New product', new_product_path %>
-        <%end%>
       </div>
     </div>
     <% end %>
