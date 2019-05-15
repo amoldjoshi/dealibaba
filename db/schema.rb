@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_191528) do
+ActiveRecord::Schema.define(version: 2019_05_15_062445) do
 
   create_table "abouts", force: :cascade do |t|
     t.text "question"
@@ -68,6 +68,14 @@ ActiveRecord::Schema.define(version: 2019_05_14_191528) do
     t.string "productbutton"
     t.string "productdescription"
     t.string "productresearch"
+    t.boolean "productvisible", default: true
+  end
+
+  create_table "promotions", force: :cascade do |t|
+    t.string "thisweek"
+    t.string "nextweek"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

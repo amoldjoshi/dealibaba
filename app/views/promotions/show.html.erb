@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Thisweek:</strong>
+  <%= @promotion.thisweek %>
+</p>
+
+<p>
+  <strong>Nextweek:</strong>
+  <%= @promotion.nextweek %>
+</p>
+
+<%= link_to 'Edit', edit_promotion_path(@promotion) %> |
+<%= link_to 'Back', promotions_path %>
