@@ -4,6 +4,7 @@
 
   <div class="row mb-2">
     <% @products.each do |product| %>
+    <% if product.productvisible? %>
     <div class="col-md-3">
       <div class="card border-primary bg-light" style="max-width: 18rem;">
         <div class="card-header">
@@ -24,6 +25,7 @@
         </div>
       </div>
     </div>
+    <% end %>
     <% end %>
   </div><!--finished row-->
 </div><!--finished container-->
