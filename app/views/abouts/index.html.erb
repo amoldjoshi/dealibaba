@@ -12,14 +12,18 @@
       <div class="card bg-light mb-3" style="max-width: 35 rem; ">
         <div class="container">
           <div class="card-header"><%= about.question %></div>
-          <div class="card-text"><%= about.answer %></div>
 
+        <div class="card-body"> 
+          <div class="card-text"><%= about.answer %></div>
+        </div>
+        <div class ="card-footer">
           <% if can? :update, about %>
             <p><%= link_to 'Show', about %>
             <%= link_to 'Edit', edit_about_path(about) %>
             <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
             <%= link_to 'New About', new_about_path %></p>
           <%end%>
+        </div>
         </div><!--end container-->
       </div><!--end card-->
     </div><!--col 5-->
