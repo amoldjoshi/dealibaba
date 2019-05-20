@@ -1,32 +1,30 @@
 <%- model_class = About -%>
 <div class="container">
-<div class="row">
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div></div>
-<p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="page-header">
+      <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+    </div>
+  </div><!--end row-->
 
-<div class="row">
-  <% @abouts.each do |about| %>
-    <div class = "col-md-5">
-      <div class="card bg-light mb-3" style="max-width: 35 rem; ">
-        <div class="container">
+  <div class="row">
+    <% @abouts.each do |about| %>
+      <div class = "col-md-5">
+        <div class="card bg-light mb-3" style="max-width: 35 rem;">
           <div class="card-header"><%= about.question %></div>
+            <div class="card-body"> 
+              <div class="card-text"><%= about.answer %></div>
+            </div>
 
-        <div class="card-body"> 
-          <div class="card-text"><%= about.answer %></div>
-        </div>
-        <div class ="card-footer">
-          <% if can? :update, about %>
-            <p><%= link_to 'Show', about %>
-            <%= link_to 'Edit', edit_about_path(about) %>
-            <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%= link_to 'New About', new_about_path %></p>
-          <%end%>
-        </div>
-        </div><!--end container-->
-      </div><!--end card-->
-    </div><!--col 5-->
-  <% end %>
-</div><!--end row-->
+            <div class ="card-footer">
+              <% if can? :update, about %>
+                <p><%= link_to 'Show', about %>
+                <%= link_to 'Edit', edit_about_path(about) %>
+                <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'New About', new_about_path %></p>
+              <%end%>
+            </div>
+        </div><!--end card-->
+      </div><!--col 5-->
+    <% end %>
+  </div><!--end row-->
 </div><!--end row-->
