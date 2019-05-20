@@ -17,10 +17,10 @@
 
             <div class ="card-footer">
               <% if can? :update, about %>
-                <p><%= link_to 'Show', about %>
+                <%= link_to 'Show', about %>
                 <%= link_to 'Edit', edit_about_path(about) %>
                 <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <%= link_to 'New About', new_about_path %></p>
+                <%= link_to 'New About', new_about_path %>
               <%end%>
             </div>
         </div><!--end card-->
