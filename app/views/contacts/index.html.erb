@@ -13,10 +13,10 @@
           <div class="card-header"><h4><%= contact.question %></h4></div>
             <div class="card-body"> 
               <p class="card-text"><%= contact.answer %></p>
-              <p class="card-text"><%= contact.email %></p>
             </div>
 
             <div class ="card-footer">
+              <p class="card-text"><%= contact.email %></p>
               <% if can? :update, contact %>
                 <p><%= link_to 'Show', contact %></p>
                 <p><%= link_to 'Edit', edit_contact_path(contact) %></p>
