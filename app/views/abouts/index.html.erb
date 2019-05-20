@@ -1,7 +1,7 @@
 <%- model_class = About -%>
 <div class="container">
   <div class="row">
-    <div class="page-header text-center">
+    <div class="page-header">
       <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
     </div>
   </div><!--end row-->
@@ -10,7 +10,7 @@
     <% @abouts.each do |about| %>
       <div class = "col-md-5">
         <div class="card bg-light mb-3" style="max-width: 35 rem;">
-          <div class="card-header"><%= about.question %></div>
+          <div class="card-header"><h1><%= about.question %></h1></div>
             <div class="card-body"> 
               <div class="card-text"><%= about.answer %></div>
             </div>
