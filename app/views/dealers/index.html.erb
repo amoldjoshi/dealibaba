@@ -1,10 +1,11 @@
 <%- model_class = Dealer -%>
-<div class="container">
+
+<div class="container-fluid">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
   <div class="row mb-2">
     <% @dealers.each do |dealer| %>
       <div class="col-md-2">
-        <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
+        <div class="card border-primary bg-light mb-3" style="max-width: 16rem;">
           <div class="card-header">
             <%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %>
           </div>
@@ -23,7 +24,7 @@
               <%= link_to 'Destroy', dealer, method: :delete, data: { confirm: 'Are you sure?' } %>||
               <%= link_to 'New dealer', new_dealer_path %>
             <%end%>
-          <div>
+          </div>
         </div>
       </div><!--end col -->
     <% end %>
