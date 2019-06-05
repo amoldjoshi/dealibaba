@@ -16,17 +16,17 @@ class DealersController < ApplicationController
 
     # GET /products/dailydeals
   def dailydeals
-      @dealers = Dealer.all
+      @dealers = Dealer.all.order(:dealerid)
   end
 
     # GET /products/dailydeals
   def finders
-      @dealers = Dealer.all
+      @dealers = Dealer.all.order(:dealerid)
   end
 
   # GET /products/weeklyadds
   def weeklyadds
-    @dealers = Dealer.all
+    @dealers = Dealer.all.order(:dealerid)
   end
 
   # GET /dealers/1
