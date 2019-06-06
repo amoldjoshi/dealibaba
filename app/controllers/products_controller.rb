@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def innovations
-    @products = Product.all
+    @products = Product.all.order(productid: :desc)
   end
 
   # GET /products/1
