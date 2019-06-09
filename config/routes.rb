@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :abouts
   resources :products
   resources :dealers
-  root to: 'products#index'
+  root to: 'products#innovations'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   
