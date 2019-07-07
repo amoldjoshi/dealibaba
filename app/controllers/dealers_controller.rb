@@ -14,20 +14,26 @@ class DealersController < ApplicationController
     @dealers = Dealer.all
   end
 
-    # GET /products/dailydeals
+    # GET /products/dailydeals (dealerid1)
   def dailydeals
       @dealers = Dealer.all.order(:dealerid)
   end
 
-    # GET /products/dailydeals
+    # GET /products/dailydeals (dealerid2)
   def finders
       @dealers = Dealer.all.order(:dealerid)
   end
 
-  # GET /products/weeklyadds
+  # GET /products/weeklyadds (dealerid3)
   def weeklyadds
     @dealers = Dealer.all.order(:dealerid)
   end
+
+# GET /products/weeklyadds (dealerid4)
+  def blackfriday
+    @dealers = Dealer.all.order(:dealerid)
+  end
+
 
   # GET /dealers/1
   # GET /dealers/1.json
