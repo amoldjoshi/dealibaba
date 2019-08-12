@@ -19,8 +19,8 @@
           <p class="h6"><%= link_to( 'WHY I NEED IT?', url_with_protocol(product.productresearch),:target => :blank) %> </p>
         </div>
         <div class="card-footer">
-          <p><a class="card-text"><%=  link_to( product.productbutton, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning')%></a>
-            <a class="float-right"><font size="3" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
+          <p><a class="card-text"><%=  link_to( product.productbutton, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
+            <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
            </p>
         </div>
       </div>
