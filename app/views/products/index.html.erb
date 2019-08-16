@@ -18,7 +18,7 @@
           <p class="card-text"><font size="4"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank) %> </font></p>
         </div>
         <div class="card-footer">
-          <p><a class="card-text"><font size="4"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></font></a>
+          <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
             <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
            </p>
           <div>
