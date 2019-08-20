@@ -23,6 +23,7 @@
            </p>
           <div>
             <% if can? :update, product %>
+              <%= product.id %>
               <%= check_box("tag", product.productvisible, {checked: true}) %>
               <%= link_to 'Show', product %> ||
               <%= link_to 'Edit', edit_product_path(product) %> ||
