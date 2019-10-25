@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class = "col-md-12">
+    <div class="card bg-light ml-2 mb-3">
+        <div class="card-header text-center"><h4><%= @article.title %></h4></div>
+            <div class="card-body"> 
+              <div class="card-text"><%= @article.heading %></div>
+              <% @article.items.each do |item| %>
+				<div class="card bg-light mb-2">
+  					<div class="row no-gutters">
+    					<div class="col-md-4">
+      						<!-->img src="..." class="card-img" alt="..."<-->
+    					</div>
+    					<div class="col-md-8">
+      						<div class="card-body">
+        						<h5 class="card-title">
+									<%= item.article_id %>
+									<%= item.article.title %>
+        						</h5>
+        						<div class="card-text">
+									<%= item.itemname %>
+									<%= item.itemdescription %>		
+								</div>
+      						</div>
+
+							<div class ="card-footer">
+								<%= item.itemurl %>
+								<%= item.itemprice %>
+							</div>	
+    					</div>
+  					</div>
+				</div>	
+			   <% end %>
+
+            <div class ="card-footer">
+            	<p><%= @article.conclusion %></p>
+            	
+            	<div>
+              		<% if can? :update, @article %>
+                	<%= link_to 'Edit', edit_article_path(@article) %>
+                	<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+                	<%= link_to 'New About', new_article_path %>
+              		<%end%>
+              		<div><%= link_to 'Back', articles_path %></div>
+              	</div>
+            </div><!--Card-footer-->
+        </div><!--end card-->
+    </div><!--col 5-->
+</div><!--end row-->
+

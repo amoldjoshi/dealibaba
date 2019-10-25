@@ -4,39 +4,106 @@
 
   <div class="row mb-2">
     <% @products.each do |product| %>
-    <div class="col-md-3">
-      <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
-        </div>
-        <div class="card-body"> 
-          <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
-          <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
-          <div class="dropdown-divider"></div>
-          <p class="card-text"><%= product.productdescription %> </p>
-          <div class="dropdown-divider"></div>
-          <p class="card-text"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank) %></p>
-        </div>
-        <div class="card-footer">
-          <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
+    <div class="card-columns">
+      <div class="col-md-3">
+        <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">
+            <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
+          </div>
+          <div class="card-body"> 
+            <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
+            <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><%= product.productdescription %> </p>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank) %></p>
+          </div>
+          <div class="card-footer">
+            <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
             <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
-           </p>
-          <div>
-            <% if can? :update, product %>
-              <%= product.id %>
-              <%= check_box("tag", product.productvisible, {checked: true}) %>
-              <%= link_to 'Show', product %> ||
-              <%= link_to 'Edit', edit_product_path(product) %> ||
-              <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
-              <%= link_to 'New product', new_product_path %>
-            <%end%>
+            </p>
+            <div>
+              <% if can? :update, product %>
+                <%= product.id %>
+                <%= check_box("tag", product.productvisible, {checked: true}) %>
+                <%= link_to 'Show', product %> ||
+                <%= link_to 'Edit', edit_product_path(product) %> ||
+                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New product', new_product_path %>
+              <%end%>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
     <% end %>
   </div><!--finished row-->
 </div><!--finished container-->
 
 
+
+
+<div class="card-columns">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div class="card p-3">
+    <blockquote class="blockquote mb-0 card-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card bg-primary text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+  </div>
+  <div class="card p-3 text-right">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
