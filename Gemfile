@@ -41,7 +41,7 @@ gem 'image_processing', '~> 1.2'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem "aws-sdk-s3", require: false
 gem 'image_processing', '~> 1.2'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 #---------
 
 
