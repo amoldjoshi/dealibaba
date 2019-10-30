@@ -3,7 +3,7 @@
 
 <div class = "col-md-12">
     <div class="card bg-light ml-2 mb-3">
-        <div class="card-header text-center"><h4><%= @article.title %></h4></div>
+        <div class="card-header text-center"><h4><%= @article.id @article.title %></h4></div>
             <div class="card-body"> 
               <div class="card-text"><%= @article.heading %></div>
               <% @article.items.each do |item| %>
