@@ -9,7 +9,7 @@
     <div class="col-md-3">
       <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">
-          <p class="card-text"><%= article.id article.title %> </p>
+          <p class="card-text"><%= article.title %> </p>
         </div>
         <div class="card-body"> 
           <picture><%= image_tag(article.photo, class: 'fit-picture') %></picture>
@@ -18,7 +18,7 @@
           <p class="card-text"><%= article.items.count %> </p>
         </div>
         <div class="card-footer">
-          <p><a class="card-text"><%=  link_to( article.conclusion , article,:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
+          <p><a class="card-text"></a>
            </p>
           <div>
             <% if can? :update, article %>
