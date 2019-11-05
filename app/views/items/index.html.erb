@@ -1,38 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Items</h1>
+<%- model_class = Item -%>
 
-<table>
-  <thead>
-    <tr>
-      <th>Itemname</th>
-      <th>Itemurl</th>
-      <th>Itemprice</th>
-      <th>Itembutton</th>
-      <th>Itemdescription</th>
-      <th>Article</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
 
-  <tbody>
+  <div class="row mb-2">
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.itemname %></td>
-        <td><%= item.itemurl %></td>
-        <td><%= item.itemprice %></td>
-        <td><%= item.itembutton %></td>
-        <td><%= item.itemdescription %></td>
-        <td><%= item.article_id %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-md-3">
+        <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
+          <div class="card-header">
+            <%= link_to(item.itemname, url_with_protocol(item.itemurl),:target => :blank) %>
+          </div>
+          <div class="card-body">
+            <picture><%= image_tag(item.image, class: 'fit-picture') %></picture>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><%= item.itemdescription %> </p>
+          <div class="card-footer">
+            <p><a class="card-text"><%=  link_to( item.itembutton , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
+            <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a>
+            </p>
+            <div>
+              <% if can? :update, item %>
+                <%= item.id %>
+                <%= link_to 'Show', item %> ||
+                <%= link_to 'Edit', edit_item_path(item) %> ||
+                <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New product', new_item_path %>
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
+</div><!--finished container-->
 
-<br>
 
 <%= link_to 'New Article', new_article_path %>
 <%= link_to 'New Item', new_item_path %>
