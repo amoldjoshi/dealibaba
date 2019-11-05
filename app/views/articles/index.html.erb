@@ -14,11 +14,10 @@
         </div>
         <div class="card-body"> <p class="card-title"><%= link_to article.title, article %> </p>
           <div class="dropdown-divider"></div>
-          <p class="card-text"><%= article.heading %> </p>
-          <p class="card-text"><%= article.items.count %> </p>
+          <p class="card-text"><%= 'Ideas Reviewed' article.items.count %> </p>
         </div>
         <div class="card-footer">
-          <p><a class="card-text"></a>
+          <p><a class="card-text"><%= link_to 'Read More..', article %></a>
            </p>
           <div>
             <% if can? :update, article %>
