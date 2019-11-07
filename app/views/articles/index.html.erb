@@ -12,7 +12,7 @@
           <picture><%= image_tag(article.photo, class: 'img-fluid rounded') %></picture>
         </div>
         <div class="card-body"> 
-          <p class="card-title text-center font-weight-bold"><%= link_to article.title, article %> </p>
+          <h3 class="card-title text-center font-weight-bold"><%= link_to article.title, article %></h3>
           <div class="dropdown-divider"></div>
           <p class="card-text"><%= article.items.count %> </p>
         </div>
