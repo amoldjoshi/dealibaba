@@ -5,11 +5,11 @@
     <div class="card ml-2 mb-3">
         <div class="card-header text-center"><h4><%=  @article.title %></h4></div>
             <div class="card-body"> 
-              <div class="card-text"><%= @article.heading %></div>
+              <div class="card-text mb-2"><%= @article.heading %></div>
               <% @article.items.each do |item| %>
-				<div class="card bg-light mb-2">
+				<div class="card mb-2">
   					<div class="row no-gutters">
-    					<div class="col-md-4">
+    					<div class="col-md-3">
           <picture><%= image_tag(item.image, class: 'fit-picture') %></picture>
     					</div>
     					<div class="col-md-8">
@@ -21,8 +21,8 @@
       						</div>
 
 							<div class ="card-footer">
-								<%= item.itemurl %>
-								<%= item.itemprice %>
+                <%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-primary btn-sm')%>
+                <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a>
 							</div>	
     					</div>
   					</div>
