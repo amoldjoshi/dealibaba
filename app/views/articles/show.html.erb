@@ -5,7 +5,7 @@
     <div class="card ml-2 mb-3">
         <div class="card-header text-center"><h4><%=  @article.title %></h4></div>
             <div class="card-body"> 
-              <div class="card-text mb-2"><%= @article.heading %></div>
+              <div class="card-text text-justify mb-2"><%= @article.heading %></div>
               <% @article.items.each do |item| %>
 				<div class="card mb-2">
   					<div class="row no-gutters">
