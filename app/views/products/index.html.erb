@@ -4,7 +4,7 @@
 
   <div class="row mb-2">
     <% @products.each do |product| %>
-        <div class = "card-deck">
+        <div class = "card-group">
         <div class="card border-0 rounded bg-light mb-3" style="max-width: 18rem;">
           <div class="card-header">
             <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
