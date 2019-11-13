@@ -5,6 +5,7 @@
   <div class="row mb-2">
     <% @products.each do |product| %>
       <div class="col-md-3">
+        <div class = "Card deck">
         <div class="card border-primary bg-light mb-3" style="max-width: 18rem;">
           <div class="card-header">
             <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
@@ -33,7 +34,8 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
-    </div>
     <% end %>
+  </div>
 </div><!--finished container-->
