@@ -5,26 +5,25 @@
   <div class="row mb-2">
     <% @products.each do |product| %>
     <% if product.productvisible? %>
-    <div class="col-md-3">
-      <div class="card border-primary bg-light  mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
-        </div>
-        <div class="card-body"> 
-          <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
-          <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
-          <div class="dropdown-divider"></div>
-          <p class="card-text"><%= product.productdescription %> </p>
-          <div class="dropdown-divider"></div>
-          <p class="card-text"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank) %> </p>
-        </div>
-        <div class="card-footer">
-          <p><a class="card-text"><%=  link_to( product.productbutton, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
+      <div class = "card-deck mr-1">
+        <div class="card border-0 rounded bg-light mb-1" style="max-width: 15rem;">
+          <div class="card-header">
+            <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank) %>
+          </div>
+          <div class="card-body"> 
+            <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><%= product.productdescription %> </p>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank) %> </p>
+          </div>
+          <div class="card-footer">
+            <p><a class="card-text"><%=  link_to( product.productbutton, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
             <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
-           </p>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
     <% end %>
   </div><!--finished row-->
