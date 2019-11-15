@@ -8,23 +8,23 @@
 
   <div class="row">
     <% @abouts.each do |about| %>
-      <div class = "col-md-5">
-        <div class="card bg-light mb-3" style="max-width: 35 rem;">
+      <div class = "card-deck mr-1">
+        <div class="card border-0 rounded bg-light mb-3" style="max-width: 35 rem;">
           <div class="card-header"><h4><%= about.question %></h4></div>
-            <div class="card-body"> 
-              <div class="card-text"><%= about.answer %></div>
-            </div>
+          <div class="card-body"> 
+            <div class="card-text"><%= about.answer %></div>
+          </div>
 
-            <div class ="card-footer">
-              <% if can? :update, about %>
-                <%= link_to 'Show', about %>
-                <%= link_to 'Edit', edit_about_path(about) %>
-                <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <%= link_to 'New About', new_about_path %>
-              <%end%>
-            </div>
+          <div class ="card-footer">
+            <% if can? :update, about %>
+              <%= link_to 'Show', about %>
+              <%= link_to 'Edit', edit_about_path(about) %>
+              <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'New About', new_about_path %>
+            <%end%>
+          </div>
         </div><!--end card-->
       </div><!--col 5-->
     <% end %>
   </div><!--end row-->
-</div><!--end row-->
+</div><!--end container-->
