@@ -2,7 +2,7 @@
 
 <div class="container">
 <div class="row justify-content-center">
-<div class = "col-md-10">
+<div class = "col-md-9">
   <div class="card ml-2 mb-3">
     <!--<div class="card-header text-center"><h4><%=  @article.title %></h4></div>-->
       <div class="card-body">
@@ -29,10 +29,9 @@
 		</div>
   </div>	
 	<% end %>
-  
+
   <div class="card ml-2 mb-3">
-        <div class="card-text text-justify mb-2"><%= @article.conclusion %></div>
-    <p><%= @article.conclusion %></p>
+    <div class="card-text text-justify mb-2"><%= @article.conclusion %></div>
             	
    	<div>
    		<% if can? :update, @article %>
@@ -45,4 +44,4 @@
   </div><!----end card-->
 </div><!--col-md-10-->
 </div><!--row-->
-</div>
+</div><!--container-->
