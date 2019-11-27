@@ -3,7 +3,7 @@
 <div class="container">
 <div class="row justify-content-center">
 <div class = "col-md-9">
-  <div class="card ml-2 mb-3">
+  <div class="card rounded ml-2 mb-3">
     <!--<div class="card-header text-center"><h4><%=  @article.title %></h4></div>-->
       <div class="card-body">
         <div class="display-4 text-center mb-2"><%= @article.title %></div> 
@@ -11,7 +11,7 @@
       </div>
     </div><!--end <div class="card ml-2 mb-3"> -->
   <% @article.items.each do |item| %>
-  <div class="card ml-2 mb-3">
+  <div class="card rounded ml-2 mb-3">
   	<div class="row no-gutters">
   		<div class="col-md-3">
         <picture><%= image_tag(item.image, class: 'fit-picture') %></picture>
@@ -30,7 +30,7 @@
   </div>	
 	<% end %>
 
-  <div class="card ml-2 mb-3">
+  <div class="card rounded ml-2 mb-3">
     <div class="card-text text-justify mb-2"><%= @article.conclusion %></div>
             	
    	<div>
