@@ -2,45 +2,42 @@
 
 <div class = "col-md-10">
   <div class="card ml-2 mb-3">
-    <div class="card-header text-center"><h4><%=  @article.title %></h4></div>
-      <div class="card-body"> 
+    <!--<div class="card-header text-center"><h4><%=  @article.title %></h4></div>-->
+      <div class="card-body">
+        <div class="card-text text-center mb-2"><%= @article.title %></div> 
         <div class="card-text text-justify mb-2"><%= @article.heading %></div>
-              <% @article.items.each do |item| %>
-				<div class="card mb-2">
-  					<div class="row no-gutters">
-    					<div class="col-md-3">
-          <picture><%= image_tag(item.image, class: 'fit-picture') %></picture>
-    					</div>
-    					<div class="col-md-8">
-      						<div class="card-body">
-        						<div class="card-text">
-									<%= item.itemname %>
-									<%= item.itemdescription %>		
-								</div>
-      						</div>
+      </div>
+    </div><!--end <div class="card ml-2 mb-3"> -->
+  <% @article.items.each do |item| %>
+  <div class="card ml-2 mb-3">
+  	<div class="row no-gutters">
+  		<div class="col-md-3">
+        <picture><%= image_tag(item.image, class: 'fit-picture') %></picture>
+  		</div>
+  		<div class="col-md-8">
+  			<div class="card-body">
+  				<div class="card-text">
+						<%= item.itemname %>
+						<%= item.itemdescription %>
+              <%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-primary btn-sm')%>
+              <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a>		
+					</div>
+  			</div>	
+			</div>
+		</div>
+  </div>	
+	<% end %>
 
-							<div class ="card-footer">
-                <%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-primary btn-sm')%>
-                <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a>
-							</div>	
-    					</div>
-  					</div>
-				</div>	
-			   <% end %>
-
-            <div class ="card-footer">
-            	<p><%= @article.conclusion %></p>
+  <div class ="card">
+    <p><%= @article.conclusion %></p>
             	
-            	<div>
-              		<% if can? :update, @article %>
-                	<%= link_to 'Edit', edit_article_path(@article) %>
-                	<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
-                	<%= link_to 'New About', new_article_path %>
-              		<%end%>
-              		<div><%= link_to 'Back', articles_path %></div>
-              	</div>
-            </div><!--Card-footer-->
-        </div><!--end card-->
-    </div><!--col 5-->
-</div><!--end row-->
-
+   	<div>
+   		<% if can? :update, @article %>
+     	<%= link_to 'Edit', edit_article_path(@article) %>
+     	<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'New About', new_article_path %>
+      <%end%>
+      <div><%= link_to 'Back', articles_path %></div>
+    </div>
+  </div><!----end card-->
+</div><!--col-md-10-->
