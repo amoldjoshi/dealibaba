@@ -1,6 +1,6 @@
 <%- model_class = Dealer -%>
 
-<div class="container-fluid">
+<div class="container">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
   <div class="row mb-2">
     <% @dealers.each do |dealer| %>
@@ -11,7 +11,7 @@
           </div>
           
           <div class="card-body"> 
-            <picture><%= image_tag(dealer.logo, class: 'fit-logo') %></picture>
+            <picture><%= image_tag(dealer.logo, class: 'fit-picture') %></picture>
             <div class="dropdown-divider"></div>
             <p class="card-text"><%= dealer.dealercategory %> </p>
           </div>
