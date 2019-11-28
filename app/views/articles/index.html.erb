@@ -9,10 +9,9 @@
     <div class = "card-deck mr-1">
       <div class="card border-0 bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">
-          <picture><%= image_tag(article.photo, class: "card-img-top rounded") %></picture>
+          <picture><%= image_tag(article.photo, class: "rounded") %></picture>
         </div>
         <div class="card-body"> 
-          <picture><%= image_tag(article.photo, class: "card-img-top rounded") %></picture>
           <h5 class="card-title text-center font-weight-bold"><%= link_to article.title, article %></h5>
         </div>
         <div class="card-footer">
