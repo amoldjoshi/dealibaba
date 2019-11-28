@@ -6,12 +6,12 @@
       <% @dealers.each do |dealer| %>
         <% if dealer.dealertype == 3 %>
           <div class = "card-deck mr-1">
-            <div class="card border-0 rounded bg-light mb-3" style="max-width: 16rem;">
+            <div class="card border-0 rounded bg-light mb-3" style="max-width: 15rem;">
               <div class="card-header">
                 <h4><%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %></h4>
               </div><!--end card header -->
               <div class="card-body"> 
-                <picture><%= image_tag(dealer.logo, class: 'img-fluid') %></picture>
+                <picture><%= image_tag(dealer.logo, class: 'fit-picture') %></picture>
                 <div class="dropdown-divider"></div>
                 <p class="card-text"><%= dealer.dealercategory %> </p>
               </div><!--end card body -->
