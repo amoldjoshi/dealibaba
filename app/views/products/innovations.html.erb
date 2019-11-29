@@ -1,8 +1,8 @@
 <%- model_class = Product -%>
-<div class="container text-center">
+<div class="container ">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
 
-  <div class="row mb-2">
+  <div class="row mb-2 text-center">
     <% @products.each do |product| %>
     <% if product.productvisible? %>
       <div class = "card-deck mr-1">
