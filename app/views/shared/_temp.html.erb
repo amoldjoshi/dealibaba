@@ -1,24 +1,17 @@
 <nav class="height-full">
  <div class="fixed-left ">
-  <div class="container">
   <ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link" href="#"></a>
-    </li>
-    <li class="nav-item">
-     <a>Its "dealibaba.com"</a><br/>
-     <a>de before alibaba.</a>
+        <a><%=  link_to 'Kids', products_path (productcategory: 'Kids') %></a>
       <div class="dropdown-divider"></div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><%=link_to_unless_current 'Products', root_path %></a>
+        <a><%=  link_to 'Hers', products_path (productcategory: 'Hers') %></a>
       <div class="dropdown-divider"></div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><%=link_to_unless_current 'Dealers', weekly_adds_path  %></a>
+        <a><%=  link_to 'His', products_path (productcategory: 'His') %></a>
       <div class="dropdown-divider"></div>
+        <a><%=  link_to 'Pets', products_path (productcategory: 'Pets') %></a>
+      <div class="dropdown-divider"></div>
+        <a><%=  link_to 'See All', products_path %></a>
     </li>
   </ul>
   </div>
- </div>
 </nav>

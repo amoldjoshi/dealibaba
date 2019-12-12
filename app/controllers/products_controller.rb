@@ -7,7 +7,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all.order(productid: :desc)
+
+    if params["productcategory"]
+      @products = Product.where(productcategory: params[:productcategory]).order(productid: :desc)
+    else
+      @products = Product.all.order(productid: :desc)
+    end
   end
 
   def innovations
