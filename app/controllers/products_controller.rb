@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   def index
 
     if params["productcategory"]
-      @products = Product.where(productcategory: params[:productcategory]).order(productid: :desc)
+      @products = Product.where(productcategory: params[:productcategory])
     else
       @products = Product.all.order(productid: :desc)
     end
