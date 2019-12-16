@@ -2,18 +2,7 @@
 <div class="container ">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
 
- <div class="fixed-left">
-  <ul class="nav flex-column">
-    <li class="nav-item">
-        <a><%=  link_to 'Kids', products_path(productcategory: 'Kids') %></a>
-        <a><%=  link_to 'Hers', products_path(productcategory: 'Hers') %></a>
-        <a><%=  link_to 'His',  products_path(productcategory: 'His') %></a>
-        <a><%=  link_to 'Pets', products_path(productcategory: 'Pets') %></a>
-        <a><%=  link_to 'See All', products_path %></a>
-    </li>
-  </ul>
- </div>
-
+  <%= render 'shared/temp'%> 
 
   <div class="row mb-2 justify-content-center">
     <% @products.each do |product| %>
