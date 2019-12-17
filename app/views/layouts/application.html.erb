@@ -20,17 +20,16 @@
 <div class="container-fluid">
   <body>
     <div class="row"><%= render 'shared/navbar'%></div>
-    <div class="row">
+    <div class="row mb2">
       <%= render 'shared/jumboproducts'%>
+    </div>
+    <div class="row mb 2">
+      <%= render 'shared/temp1'%> 
       <%= render 'shared/alerts'%>
     </div>
     <div class="row mb 2">
-      <div class="col-2 text-center">
-        <%= render 'shared/temp1'%> 
-      </div>
-      <div class="col-10  text-center">
-        <%= yield %>
-      </div>
+      <%= yield %>
+    </div>
     <div class="row"><%= render 'shared/footer'%></div>
   </body>
 </div>
