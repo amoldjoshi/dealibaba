@@ -1,0 +1,19 @@
+<ul class="list-group rounded">
+  <li class="list-group-item">
+    <a><%=  link_to( "See All",products_path, :class => 'btn btn-outline-info btn-block')%></a>
+  </li>
+  <li class="list-group-item">
+    <a><%=  link_to( "Kids" ,products_path(productcategory: 'Kids'), :class => 'btn btn-outline-info btn-block')%></a>
+  </li>
+  <li class="list-group-item">
+    <a><%=  link_to( "Hers" ,products_path(productcategory: 'Hers'), :class => 'btn btn-outline-info btn-block')%></a>
+  </li>
+  <li class="list-group-item">
+    <a><%=  link_to( "His" ,products_path(productcategory: 'His'), :class => 'btn btn-outline-info btn-block')%></a>
+  </li>
+  <li class="list-group-item">
+    <a><%=  link_to( "Gadgets" ,products_path(productcategory: 'Gadgets'), :class => 'btn btn-outline-info btn-block')%></a>
+  </li>
+</ul>
+
+

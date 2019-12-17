@@ -132,11 +132,17 @@ nav {
      font-weight: 700; 
      line-height: 15.4px;
      font-size: 1.3em !important; 
-    padding-right:5px;
+     padding-right:5px;
    }
 
 .nav a:hover{
   background-color:#F2F2F2 !important;
+}
+
+.nav-tab{
+     border-color: #000000;
+     border-radius: 6px !important;
+     -moz-border-radius: 6px !important;
 }
 
 .card :hover{

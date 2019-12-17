@@ -49,3 +49,21 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
+<div class="container-fluid">
+  <div class="jumbotron mb-2 text-center">
+    <a><%=  link_to( "See All",products_path, :class => 'btn btn-secondary btn-lg')%></a>
+
+
+    <a><%=  link_to( "Kids" ,products_path(productcategory: 'Kids'), :class => 'btn btn-secondary btn-lg')%></a>
+
+
+    <a><%=  link_to( "Hers" ,products_path(productcategory: 'Hers'), :class => 'btn btn-secondary btn-lg')%></a>
+
+    <a><%=  link_to( "His" ,products_path(productcategory: 'His'), :class => 'btn btn-secondary btn-lg')%></a>
+
+    <a><%=  link_to( "Gadget" ,products_path(productcategory: 'Gadgets'), :class => 'btn btn-secondary btn-lg')%></a>
+
+    <a><%=  link_to( "Gadget" ,products_path(productcategory: 'Gadgets'), :class => 'btn btn-secondary btn-lg')%></a>
+
+  </div>
+</div>

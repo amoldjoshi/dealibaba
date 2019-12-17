@@ -1,4 +1,17 @@
+<div class="container">
+ <nav class="navbar  ">
+  
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+
+
 <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a><%=  link_to 'See All', products_path %></a>
+  </li>
   <li class="nav-item">
     <a><%=  link_to 'Kids', products_path(productcategory: 'Kids') %></a>
   </li>
@@ -11,7 +24,5 @@
   <li class="nav-item">
     <a><%=  link_to 'Pets', products_path(productcategory: 'Pets') %></a>
   </li>
-  <li class="nav-item">
-    <a><%=  link_to 'See All', products_path %></a>
-  </li>
-</ul>
+ </nav>
+</div>
