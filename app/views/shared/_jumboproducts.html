@@ -1,11 +1,19 @@
 <div class="container-fluid">
-  <div class="jumbotron mb-2 text-center">
-  	<!--
-  	<a class="btn btn-primary btn-lg" href="#" role="button"><%=  link_to( 'Visit Weekly Adds', weeklyadds_path, :class => 'btn btn-warning')%></a>-->
-     <a href="weeklyadds" class="btn btn-sm btn-warning"> Weekly Papers!</a>
-        <a href="finders" class="btn btn-sm btn-warning"> Daily Dealers!</a>
-        <a href="finders" class="btn btn-sm btn-warning"> Black  Friday!</a>
-     <!--<a href="#" class="btn btn-sm btn-success">Promotions now: Electronics</a>
-     <a href="#" class="btn btn-sm btn-success">Promotion next week: Toys</a>-->
-  </div>
+
+ <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F2F3F4;">
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+     <a><%=  link_to("Weekly Papers!", weeklyadds_path, :class => 'btn btn-outline-info btn-block')%></a>
+
+     <a><%=  link_to("Daily Deals",finders_path, :class => 'btn btn-outline-info btn-block')%></a>
+  
+     <a><%=  link_to("Black Friday",finders_path, :class => 'btn btn-outline-info btn-block')%></a>
+
+	</div>
+  </nav>
 </div>

@@ -8,7 +8,9 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
  
-    <a mr-2><%=  link_to( "See All",products_path, :class => 'btn btn-outline-info btn-block')%></a>
+    <a><%=  link_to( "Weekly Adds",weeklyadds_path, :class => 'btn btn-outline-info btn-block')%></a>
+
+    <a><%=  link_to( "See All",products_path, :class => 'btn btn-outline-info btn-block')%></a>
 
     <a><%=  link_to( "Kids" ,products_path(productcategory: 'Kids'), :class => 'btn btn-outline-info btn-block')%></a>
   
@@ -17,8 +19,6 @@
     <a><%=  link_to( "His" ,products_path(productcategory: 'His'), :class => 'btn btn-outline-info btn-block')%></a>
  
     <a><%=  link_to( "Gadgets" ,products_path(productcategory: 'Gadgets'), :class => 'btn btn-outline-info btn-block')%></a>
-
+	</div>
+  </nav>
 </div>
-</nav>
-</div>
-
