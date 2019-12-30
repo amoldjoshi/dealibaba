@@ -5,6 +5,7 @@
     <div class="row mb-2 justify-content-center">
       <% @dealers.each do |dealer| %>
         <% if dealer.dealertype == 3 %>
+         <div class="col-md-3">
           <div class = "card-deck mr-1">
             <div class="card border-0 rounded bg-light mb-3" style="max-width: 15rem;">
               <div class="card-header">
@@ -30,6 +31,7 @@
               <%end%>
             </div><!--end if can -->
           </div><!--end card deck -->
+         </div><!--end column -->
         <% end %>
       <% end %>
     </div><!--end row-->

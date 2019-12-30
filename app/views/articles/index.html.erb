@@ -6,17 +6,18 @@
 
   <div class="row mb-2 justify-content-center">
     <% @articles.each do |article| %>
-    <div class = "card-deck mr-1">
-      <div class="card border-0 bg-light mb-3" style="max-width: 18rem;">
+     <div class="col-md-4">
+      <div class = "card-deck mr-1">
+       <div class="card border-0 bg-light mb-3" style="max-width: 18rem;">
           <picture><%= image_tag(article.photo, class: "card-img-top rounded") %></picture>
-        <div class="card-body"> 
-          <h5 class="card-title text-center font-weight-bold"><%= link_to article.title, article %></h5>
-        </div>
-        <div class="card-footer">
-          <p><a class="card-text"><%= link_to 'Read More..', article %></a></p>
-          <a class="card-text">
+          <div class="card-body"> 
+            <h5 class="card-title text-center font-weight-bold"><%= link_to article.title, article %></h5>
+          </div>
+          <div class="card-footer">
+           <p><a class="card-text"><%= link_to 'Read More..', article %></a></p>
+           <a class="card-text">
             <%=  link_to( 'Read More ..', article,:target => :blank, :class => 'btn btn-warning btn-sm')%> <span class="badge badge-light text-right"><%= article.items.count %></span>
-          </a>
+           </a>
           <div>
             <% if can? :update, article %>
               <%= link_to 'New Article', new_article_path %>||
@@ -27,9 +28,10 @@
               <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
             <%end%>
           </div>
+         </div>
+        </div>
         </div>
       </div>
-    </div>
     <% end %>
   </div><!--finished row-->
 </div><!--finished container-->
