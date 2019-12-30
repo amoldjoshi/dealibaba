@@ -6,7 +6,6 @@
 
   <div class="row mb-2 justify-content-center">
     <% @articles.each do |article| %>
-     <div class="col-md-4">
       <div class = "card-deck mr-1">
        <div class="card border-0 bg-light mb-3" style="max-width: 18rem;">
           <picture><%= image_tag(article.photo, class: "card-img-top rounded") %></picture>
@@ -31,7 +30,6 @@
          </div>
         </div>
         </div>
-      </div>
     <% end %>
   </div><!--finished row-->
 </div><!--finished container-->

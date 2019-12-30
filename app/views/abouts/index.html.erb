@@ -8,7 +8,6 @@
 
   <div class="row">
     <% @abouts.each do |about| %>
-     <div class="col-md-5">
       <div class = "card-deck mr-1">
         <div class="card border-0 rounded bg-light mb-3" style="max-width: 35 rem;">
           <div class="card-header"><h4><%= about.question %></h4></div>
@@ -26,7 +25,6 @@
           </div>
         </div><!--end card-->
       </div><!--card-deck-->
-     </div><!--col-md-2-->
     <% end %>
   </div><!--end row-->
 </div><!--end container-->
