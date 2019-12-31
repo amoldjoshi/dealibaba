@@ -6,8 +6,7 @@
 
   <div class="row mb-2 justify-content-center">
     <% @articles.each do |article| %>
-      <div class = "card-deck mr-1">
-       <div class="card border-0 bg-light mb-3" style="max-width: 18rem;">
+       <div class="card border-0 bg-light mb-3 mr-5" style="max-width: 15rem; max-height: 30rem;">
           <picture><%= image_tag(article.photo, class: "card-img-top rounded") %></picture>
           <div class="card-body"> 
             <h5 class="card-title text-center font-weight-bold"><%= link_to article.title, article %></h5>
@@ -28,7 +27,6 @@
             <%end%>
           </div>
          </div>
-        </div>
         </div>
     <% end %>
   </div><!--finished row-->
