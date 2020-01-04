@@ -3,13 +3,14 @@
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
   <div class="row mb-2 justify-content-center">
     <% @products.each do |product| %>
-        <div class="card border-0 rounded bg-light mb-3 mr-5" style="max-width: 15rem; max-height: 45rem;">
-          <div class="card-header">
-            <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-outline-info btn-block') %>
-          </div>
-          <div class="card-body"> 
+        <div class="card border-0 rounded bg-light mb-3 mr-5" style="max-width: 20rem; max-height: 30rem;">
+
+          <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
+
+          <div class="card-body">
+            <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-light btn-block') %>
             <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
-            <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
+            
             <div class="dropdown-divider"></div>
             <p class="card-text"><%= product.productdescription %> </p>
             <div class="dropdown-divider"></div>
