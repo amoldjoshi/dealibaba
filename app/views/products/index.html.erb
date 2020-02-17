@@ -5,7 +5,7 @@
     <% @products.each do |product| %>
         <div class="card rounded bg-light mb-3 mr-5" style="max-width: 15rem; max-height: auto;">
 
-          <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
+          <picture><%= image_tag(product.picture, class: 'card-img-top') %></picture>
 
           <div class="card-body">
             <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-light btn-block') %>
