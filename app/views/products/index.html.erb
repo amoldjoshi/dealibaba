@@ -3,19 +3,16 @@
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
   <div class="row mb-2 justify-content-center">
     <% @products.each do |product| %>
-        <div class="card rounded bg-light mb-3 mr-5" style="max-width: 15 rem; max-height: auto;">
+            <div class="card rounded bg-light mb-3 mr-5" style="max-width: 15rem; max-height: auto;">
 
-          <picture><%= image_tag(product.picture, class: 'card-img-top') %></picture>
+          <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
 
-          <div class="card-body">
-            <%= link_to(product.productname, url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-light btn-block') %>
-            <!--<img class="card-img-top" src= "<%= (product.picture) %>" alt="Card image cap">-->
-            
+          <div class="card-body"> 
             <div class="dropdown-divider"></div>
             <p class="card-text"><%= product.productdescription %> </p>
             <div class="dropdown-divider"></div>
-            <p class="card-text"><%= link_to( 'Review Innovation', url_with_protocol(product.productresearch),:target => :blank, :class => 'btn btn-outline-info btn-block') %></p>
-          </div><!--end card-body -->
+            <p class="card-text"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank) %> </p>
+          </div>
           <div class="card-footer">
             <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-warning btn-sm')%></a>
             <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
