@@ -3,8 +3,9 @@
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
   <div class="row mb-2 justify-content-center">
     <% @products.each do |product| %>
-            <div class="card rounded bg-light mb-3 mr-5" style="max-width: 72rem; max-height: auto;">
-
+            <!--<div class="card rounded bg-light mb-3 mr-3" style="max-width: 18rem; ">-->
+           <div class = "col-4">
+            <div class="card rounded bg-light" style="max-width: 18rem; ">
           <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
 
           <div class="card-body"> 
@@ -29,6 +30,7 @@
             </div><!--end if division -->
           </div><!--end card-footer -->
         </div><!--end card -->
+        </div>
     <% end %>
   </div>
 </div><!--finished container-->
