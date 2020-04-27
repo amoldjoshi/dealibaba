@@ -1,11 +1,11 @@
 <%- model_class = Product -%>
-<div class="container ">
+<div class="container-fluid ">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
   <div class="row mb-2 justify-content-center">
     <% @products.each do |product| %>
             <!--<div class="card rounded bg-light mb-3 mr-3" style="max-width: 18rem; ">-->
            <div class = "col-sm-4">
-            <div class="card rounded bg-light mb-2" style="max-width: 32rem; max-height: auto;">
+            <div class="card rounded bg-light mb-2" style="max-width: 32rem; max-height: 64rem;">
           <picture><%= image_tag(product.picture, class: 'fit-picture') %></picture>
 
           <div class="card-body"> 
