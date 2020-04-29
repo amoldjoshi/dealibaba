@@ -8,8 +8,7 @@
 
   <div class="row">
     <% @contacts.each do |contact| %>
-      <div class = "col-md-5">
-        <div class="card bg-light mb-3" style="max-width: 35 rem;">
+        <div class="card border-0 rounded bg-light mb-2 mr-2" style="max-width: 35rem; height: auto;">
           <div class="card-header"><h4><%= contact.question %></h4></div>
             <div class="card-body"> 
               <p class="card-text"><%= contact.answer %></p>
@@ -25,7 +24,6 @@
               <%end%>
             </div>
           </div><!--end card-->
-        </div><!--col 5-->
     <% end %>
   </div><!--end row-->
 </div>
