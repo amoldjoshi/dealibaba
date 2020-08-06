@@ -5,20 +5,21 @@
     <% @products.each do |product| %>
       <div class = "col-sm-3">
         <div class="card rounded bg-light mb-2" style="max-width: 32rem; height: 32rem;">
-          <%= image_tag(product.picture, class: "card-img-top") %>
-          <h4 class="text-center font-weight-bold"><%= product.productname %> </h4>
-          <div class="dropdown-divider"></div>
-          <div class= "container ml-2">
-            <p class="text-left"><%= product.productdescription %> </p>
-          </div>
+          <%= image_tag(product.picture, class: "card-img-top") %>   
+          <div class="card-body">
+            <h4 class="text-center font-weight-bold"><%= product.productname %> </h4>
+            <div class="dropdown-divider"></div>
+            <div class= "container ml-2">
+              <p class="text-left"><%= product.productdescription %> </p>
+            </div>
             <div class="dropdown-divider"></div>
             <h5 class="text-center"><%= link_to( 'Review Innovation ->', url_with_protocol(product.productresearch),:target => :blank, :class => 'btn btn-info btn-md') %> </h5> 
-        </div>
-        <div class="card-footer">
+          </div>
+          <div class="card-footer">
             <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-danger btn-sm')%></a>
             <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
                 </p>
-          <div>
+            <div>
               <% if can? :update, product %>
                 <%= product.id %>
                 <%= check_box("tag", product.productvisible, {checked: true}) %>
@@ -27,9 +28,10 @@
                 <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
                 <%= link_to 'New product', new_product_path %>
               <%end%>
-          </div><!--end if division -->
-        </div><!--end card-footer -->
-      </div><!--end col -->
+            </div><!--end if division -->
+          </div><!--end card-footer -->
+        </div><!--end card -->
+      </div><!--col-sm-3 -->
     <% end %>
   </div><!--finished row-->
 </div><!--finished container-->
