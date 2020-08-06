@@ -4,10 +4,10 @@
   <div class="row mb-2 justify-content-center">
     <% @products.each do |product| %>
       <div class = "col-sm-3">
-        <div class="card rounded bg-light mb-2" style="max-width: 32rem; height: 32rem;">
+        <div class="card rounded bg-light mb-2" style="max-width: 32rem; height: 40rem;">
           <%= image_tag(product.picture, class: "card-img-top") %>   
           <div class="card-body">
-            <h6 class="text-center font-weight-bold"><%= product.productname %> </h6>
+            <h4 class="text-center font-weight-bold"><%= product.productname %> </h4>
             <div class="dropdown-divider"></div>
             <div class= "container ml-2">
               <p class="text-left"><%= product.productdescription %> </p>
