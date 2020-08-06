@@ -3,36 +3,31 @@
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1></div>-->
   <div class="row mb-2 justify-content-center">
     <% @products.each do |product| %>
-            <!--<div class="card rounded bg-light mb-3 mr-3" style="max-width: 18rem; ">-->
-           <div class = "col-sm-3">
-            <div class="card rounded bg-light mb-2" style="max-width: 32rem; height: 32rem;">
-
-                <%= image_tag(product.picture, class: "card-img-top") %>
-                <div class="card-inner">
-              <div class="card-body">
-                <div class="dropdown-divider"></div>
-                <p class="card-text"><%= product.productdescription %> </p>
-                <div class="dropdown-divider"></div>
-                <a class="card-text text-center"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank, :class => 'btn btn-info btn-md') %> </a> 
-              </div>
-              <div class="card-footer">
-                <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-danger btn-sm')%></a>
-                <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
+      <div class = "col-sm-3">
+        <div class="card rounded bg-light mb-2" style="max-width: 32rem; height: 32rem;">
+          <%= image_tag(product.picture, class: "card-img-top") %>
+          <h1 class="card-text"><%= product.productname %> </h1>
+          <div class="dropdown-divider"></div>
+            <p class="card-text"><%= product.productdescription %> </p>
+            <div class="dropdown-divider"></div>
+            <a class="card-text text-center"><%= link_to( 'Review innovative gift', url_with_protocol(product.productresearch),:target => :blank, :class => 'btn btn-info btn-md') %> </a> 
+        </div>
+        <div class="card-footer">
+            <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-danger btn-sm')%></a>
+            <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
                 </p>
-                <div>
-                  <% if can? :update, product %>
-                    <%= product.id %>
-                    <%= check_box("tag", product.productvisible, {checked: true}) %>
-                    <%= link_to 'Show', product %> ||
-                    <%= link_to 'Edit', edit_product_path(product) %> ||
-                    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
-                    <%= link_to 'New product', new_product_path %>
-                  <%end%>
-                </div><!--end if division -->
-              </div><!--end card-footer -->
-              </div>
-            </div><!--end card -->
-          </div>
+          <div>
+              <% if can? :update, product %>
+                <%= product.id %>
+                <%= check_box("tag", product.productvisible, {checked: true}) %>
+                <%= link_to 'Show', product %> ||
+                <%= link_to 'Edit', edit_product_path(product) %> ||
+                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New product', new_product_path %>
+              <%end%>
+          </div><!--end if division -->
+        </div><!--end card-footer -->
+      </div><!--end col -->
     <% end %>
-  </div>
+  </div><!--finished row-->
 </div><!--finished container-->
