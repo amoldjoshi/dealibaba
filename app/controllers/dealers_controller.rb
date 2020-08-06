@@ -1,6 +1,6 @@
 class DealersController < ApplicationController
   load_and_authorize_resource
-  skip_authorize_resource :only => [ :weeklyadds, :dailydeals, :finders]
+  skip_authorize_resource :only => [ :weeklyadds, :dailydeals, :finders, :associates]
   
   #before_action :authenticate_user!, :except => [:show, :index, :weeklyadds, :dailydeals, :finders]
   
@@ -34,6 +34,10 @@ class DealersController < ApplicationController
     @dealers = Dealer.all.order(:dealerid)
   end
 
+# GET /products/weeklyadds (dealerid4)
+  def associates
+    @dealers = Dealer.all.order(:dealerid)
+  end
 
   # GET /dealers/1
   # GET /dealers/1.json

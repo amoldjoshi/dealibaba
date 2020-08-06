@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/blackfriday', to: "dealers#blackfriday"
   get '/dailydeals', to: "dealers#dailydeals"
   get '/finders', to: "dealers#finders"
+  get '/associates', to: "dealers#associates"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 
