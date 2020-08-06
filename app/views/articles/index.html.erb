@@ -12,7 +12,6 @@
             <h5 class="card-title text-center font-weight-bold"><%= link_to article.title, article %></h5>
           </div>
           <div class="card-footer">
-           <p><a class="card-text"><%= link_to 'Read More..', article %></a></p>
            <a class="card-text">
             <%=  link_to( 'Read More ..', article,:target => :blank, :class => 'btn btn-warning btn-sm')%> <span class="badge badge-light text-right"><%= article.items.count %></span>
            </a>
