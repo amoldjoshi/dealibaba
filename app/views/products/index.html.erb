@@ -8,7 +8,9 @@
           <%= image_tag(product.picture, class: "card-img-top") %>
           <h4 class="text-center font-weight-bold"><%= product.productname %> </h4>
           <div class="dropdown-divider"></div>
-            <p class="card-text"><%= product.productdescription %> </p>
+          <div class= "container ml-2">
+            <p class="text-left"><%= product.productdescription %> </p>
+          </div>
             <div class="dropdown-divider"></div>
             <h5 class="text-center"><%= link_to( 'Review Innovation ->', url_with_protocol(product.productresearch),:target => :blank, :class => 'btn btn-info btn-md') %> </h5> 
         </div>
