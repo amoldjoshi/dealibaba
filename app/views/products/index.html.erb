@@ -13,8 +13,8 @@
               <p class="text-left"><%= product.productdescription %> </p>
             </div>
           </div>
-          <div class="card-footer">
-            <h5 class="align-bottom"><%= link_to( 'Review Innovation ->', url_with_protocol(product.productresearch),:target => :blank, :class => 'btn btn-info btn-md') %> </h5> 
+          <div class="card-footer align-middle">
+            <h5><%= link_to( 'Review Innovation ->', url_with_protocol(product.productresearch),:target => :blank, :class => 'btn btn-info btn-md') %> </h5> 
             <p><a class="card-text"><%=  link_to( product.productbutton , url_with_protocol(product.producturl),:target => :blank, :class => 'btn btn-danger btn-sm')%></a>
             <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(product.productprice, :unit => "@$")%></font></a>
                 </p>
