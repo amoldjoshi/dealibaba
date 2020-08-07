@@ -7,16 +7,16 @@
         <% if dealer.dealertype == 3 %>
             <div class="card border-0 rounded bg-light mb-3 mr-5" style="max-width: 15rem; max-height: 30rem;">
               <div class="card-header">
-                <h4><%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %></h4>
+                <h4 class = "text-center font-weight-bold"><%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %></h4>
               </div><!--end card header -->
               <div class="card-body"> 
                 <picture><%= image_tag(dealer.logo, class: 'fit-picture') %></picture>
                 <div class="dropdown-divider"></div>
-                <p class="card-text"><%= dealer.dealercategory %> </p>
+                <h6 class = "text-center font-weight-bold"><%= dealer.dealercategory %> </h6>
               </div><!--end card body -->
               <div class="card-footer">
                 <p>
-                  <a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(dealer.dealerurl),:target => :blank, :class => 'btn btn-warning')%></a>
+                  <a class="text-center font-weight-bold"><%=  link_to('Lets Go!', url_with_protocol(dealer.dealerurl),:target => :blank, :class => 'btn btn-warning')%></a>
                 </p>
               </div><!--end card footer -->
             </div><!--end card -->
