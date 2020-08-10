@@ -9,6 +9,13 @@
       </p>
 
       <p>
+        <strong>Productanimation:</strong>
+        <%- if @product.animation.attached? %>
+            <%= image_tag url_for(@product.animation) %>
+        <%- end %>
+      </p>
+
+      <p>
         <strong>Productid:</strong>
         <%= @product.productid %>
       </p>
