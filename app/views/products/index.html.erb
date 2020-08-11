@@ -6,9 +6,9 @@
       <div class = "col-sm-3">
         <div class="card rounded bg-light mb-2" style="max-width: 32rem; height: 36rem;">
           <!--<%= image_tag(product.picture, class: "img-top") %>-->
-          <div>
+          <div class="card-header">
             <%= image_tag(product.picture) %>
-            <%= image_tag(product.animation, class="img-top")%>
+            <%= image_tag(product.animation, class: "img-top") %>
           </div>
           <div class="card-body">
             <h4 class="text-center font-weight-bold"> <%=  link_to( product.productname , url_with_protocol(product.producturl),:target => :blank)%> </h4>
