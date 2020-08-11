@@ -175,16 +175,16 @@ tr:hover{
   box-sizing: border-box;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 100%;
-  max-height: 250px;
-  display: none;
-  object-fit: contain;
-  object-position: center center;
-  display: inline-block;
 }
 
-
+.card  .img-top {
+  width: 100%;
+  max-height: 250px;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+}
 
 .card:hover .img-top{
-  display: inline;
+  display: block;
 }
