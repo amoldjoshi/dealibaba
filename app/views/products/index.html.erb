@@ -11,7 +11,7 @@
             <%= image_tag(product.animation, class: "img-top") %>
           </div>
           <div class="card-body">
-            <h4 class="text-center font-weight-bold"> <%=  link_to( product.productname , url_with_protocol(product.producturl),:target => :blank)%> </h4>
+            <h4 class="text-center font-weight-bold"> <%=  link_to( product.productname , url_with_protocol(product.producturl),      :target => :blank)%> </h4>
             <div class="dropdown-divider"></div>
             <div class= "container ml-2">
               <p class="text-left"><%= product.productdescription %> </p>
