@@ -6,9 +6,9 @@
       <div class = "col-sm-3">
         <div class="card rounded bg-light mb-2" style="max-width: 32rem; height: 36rem;">
           <!--<%= image_tag(product.picture, class: "img-top") %>-->
-          <%= image_tag(product.picture) %>
+          <%= image_tag(product.picture, class: "img-top") %>
           
-          <% product.animation.attached? %>
+          <% if product.animation.attached? %>
             <%= image_tag(product.animation, class: "img-top") %>
           <% end %>
 
