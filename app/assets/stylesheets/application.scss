@@ -195,5 +195,6 @@ tr:hover{
 }
 
 .card-header:hover .img-top{
+  transition: ease-in-out;
   display: inline;
 }
