@@ -12,8 +12,6 @@
   object-position: center center;
 }
 
-
-
 .fit-logo{
   width: 100%;
 }
@@ -185,7 +183,7 @@ tr:hover{
 .card-header  .img-top {
   display: none;
   object-fit: contain;
-  object-position: center center;
+  object-position: top center;
 }
 
 .card-header:hover .img-top{
