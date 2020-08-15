@@ -9,7 +9,7 @@
   <div class="row">
     <% @abouts.each do |about| %>
         <div class="card border-0 rounded bg-light mb-2 mr-2" style="max-width: 35rem; height: auto;">
-          <div class="card-header font-weight-bold"><h4><%= about.question %></h4></div>
+          <h4 class="card-header font-weight-bold"><%= about.question %></h4>
           <div class="card-body"> 
             <div class="card-text"><%= about.answer %></div>
           </div>
