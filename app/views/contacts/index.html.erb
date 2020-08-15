@@ -9,7 +9,7 @@
   <div class="row">
     <% @contacts.each do |contact| %>
         <div class="card border-0 rounded bg-light mb-2 mr-2" style="max-width: 35rem; height: auto;">
-          <div class="card-header"><h4><%= contact.question %></h4></div>
+          <div class="card-header font-weight-bold"><h4><%= contact.question %></h4></div>
             <div class="card-body"> 
               <p class="card-text"><%= contact.answer %></p>
             </div>
