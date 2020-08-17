@@ -32,7 +32,8 @@
 
   <div class="card rounded ml-2 mb-3">
     <div class="card-text text-justify mb-2"><%= @article.conclusion %></div>
-            	
+    <div class="dropdown-divider"></div>
+    <div class="card-text mb-2"><%= @article.writer %></div>
    	<div>
    		<% if can? :update, @article %>
      	<%= link_to 'Edit', edit_article_path(@article) %>
