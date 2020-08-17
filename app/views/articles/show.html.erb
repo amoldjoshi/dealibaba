@@ -11,6 +11,21 @@
         <div class="card-text text-justify mb-2"><%= @article.heading %></div>
       </div>
     </div><!--end <div class="card ml-2 mb-3"> -->
+
+
+  <% @article.articledetails.each do |articledetail| %>
+  <div class="card rounded ml-2 mb-3">
+    <div class="row no-gutters">
+      <div class="card-body">
+        <h6 class="display-4 text-center mb-2"><%= articledetail.title %></h6>
+        <p><%= articledetail.content %></p>
+      </div>     
+    </div>
+  </div> 
+  <% end %>
+ 
+ 
+
   <% @article.items.each do |item| %>
   <div class="card rounded ml-2 mb-3">
   	<div class="row no-gutters">
