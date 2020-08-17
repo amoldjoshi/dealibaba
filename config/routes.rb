@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articledetails
   resources :items
   resources :articles
   resources :promotions
