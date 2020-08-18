@@ -12,6 +12,7 @@
             <h5 class="card-title text-center font-weight-bold"><%= link_to article.title, article %></h5>
             <div class="dropdown-divider"></div>
             <h6 class="text-left font-weight-bold"><%= article.writer %></h6>
+            <h6 class="text-right"><%= @article.created_at.strftime("%b, %Y") %></h6>
           </div>
           <div class="card-footer">
            <a class="text-center font-weight-bold">
