@@ -1,4 +1,5 @@
 class ArticledetailsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_articledetail, only: [:show, :edit, :update, :destroy]
 
   # GET /articledetails
@@ -69,6 +70,6 @@ class ArticledetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def articledetail_params
-      params.require(:articledetail).permit(:title, :content, :article_id)
+      params.require(:articledetail).permit(:title, :content, :article_id, :heading, :link, :quote)
     end
 end
