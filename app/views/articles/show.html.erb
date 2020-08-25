@@ -13,17 +13,16 @@
     </div><!--end <div class="card ml-2 mb-3"> -->
 
 
-  <% @article.articledetails.each do |articledetail| %>
   <div class="card rounded ml-2 mb-3">
+  <% @article.articledetails.each do |articledetail| %>
     <div class="row no-gutters">
       <div class="card-body">
         <p class="h6 font-weight-bold mb-2"><%= articledetail.title %></p>
         <p><%= articledetail.content %></p>
       </div>     
     </div>
-  </div> 
   <% end %>
- 
+</div> 
  
 
   <% @article.items.each do |item| %>
