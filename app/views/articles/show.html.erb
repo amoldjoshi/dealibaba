@@ -6,8 +6,8 @@
   <div class="card rounded ml-2 mb-3">
     <div class="card-header text-center">
         <p class="h4 text-center font-weight-bold mb-2"><%= @article.title %></p>
-        <p class="h6 font-weight-bold"><%= @article.writer %></p>
-        <p class="h6 font-weight-bold"><%= @article.created_at.strftime("%b, %Y") %></p>
+        <p class="h6 font-italic"><%= @article.writer %>
+        <%= @article.created_at.strftime("%b, %Y") %></p>
     </div>
       <div class="card-body">
         <div class="card-text text-justify mb-2"><%= @article.heading %></div>
