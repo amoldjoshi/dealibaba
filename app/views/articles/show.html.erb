@@ -15,8 +15,7 @@
     </div><!--end <div class="card ml-2 mb-3"> -->
  
   <div class="articledetail-box">
-
-    <p class="h6 font-weight-bold text-monospace ml-2 mb-2">Following are the factors discussed in this article.</p>
+    <p class="h6 font-weight-bold text-monospace mt-2 ml-2 mb-2">Following are the factors discussed in this article.</p>
     <% @article.articledetails.each do |articledetail| %>
       <ul>
         <li class="h6 font-weight-bold text-monospace ml-2 mb-2"><%= articledetail.title %></li>
@@ -56,20 +55,21 @@
   </div>	
 	<% end %>
 
-  <div class="card rounded ml-2 mb-3">
-    <div class="card-body">
-      <div class="card-text text-justify mb-2"><%= @article.conclusion %></div>
+  <div class="articledetail-conclusion">
+    <div class="container">
+      <p class="h6 font-weight-bold text-monospace mt-2 ml-2 mb-2">This is recommendation / summary:</p>
+      <div class="text-justify mb-2"><%= @article.conclusion %></div>
       <div class="dropdown-divider"></div>
-    </div>
-   	<div>
-   		<% if can? :update, @article %>
-     	<%= link_to 'Edit', edit_article_path(@article) %>
-     	<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <%= link_to 'New About', new_article_path %>
-      <%end%>
-      <div><%= link_to 'Back', articles_path %></div>
-    </div>
-  </div><!----end card-->
+   	  <div>
+   		 <% if can? :update, @article %>
+     	  <%= link_to 'Edit', edit_article_path(@article) %>
+     	  <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'New About', new_article_path %>
+       <%end%>
+       <div><%= link_to 'Back', articles_path %></div>
+      </div>
+    </div><!----end container-->
+  </div><!----article-conclusion-->
 </div><!--col-md-10-->
 </div><!--row-->
 </div><!--container-->
