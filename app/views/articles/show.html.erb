@@ -17,7 +17,7 @@
   <div class="articledetail-box">
     <% @article.articledetails.each do |articledetail| %>
       <ul>
-        <li>* <%= articledetail.title %></li>
+        <li class="h5 font-weight-bold text-monospace mb-2"><%= articledetail.title %></li>
       </ul>
     <% end %>
   </div>
