@@ -15,9 +15,11 @@
     </div><!--end <div class="card ml-2 mb-3"> -->
  
   <div class="articledetail-box">
+
+    <p class="h6 font-weight-bold text-monospace ml-2 mb-2">Following are the factors discussed in this article.</p>
     <% @article.articledetails.each do |articledetail| %>
       <Ol>
-        <li class="h6 font-weight-bold text-monospace mb-2"><%= articledetail.title %></li>
+        <li class="h6 font-weight-bold text-monospace ml-2 mb-2"><%= articledetail.title %></li>
       </ol>
     <% end %>
   </div>
