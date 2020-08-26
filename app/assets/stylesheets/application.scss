@@ -198,3 +198,11 @@ tr:hover{
   display: inline;
   transition:ease-in-out 1s;
 }
+
+ .articledetail-box{
+  border-style: groove; 
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 10px 10px 5px #888888;
+  background: #FFF9C4;
+ }

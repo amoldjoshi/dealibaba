@@ -14,10 +14,10 @@
       </div>
     </div><!--end <div class="card ml-2 mb-3"> -->
  
-  <div class="card rounded ml-2 mb-3" style="background-color: #FFF9C4;">
+  <div class="articledetail-box">
     <% @article.articledetails.each do |articledetail| %>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">-><%= articledetail.title %></li>
+      <ul>
+        <li>* <%= articledetail.title %></li>
       </ul>
     <% end %>
   </div>
