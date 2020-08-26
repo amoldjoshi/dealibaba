@@ -28,7 +28,7 @@
   <% @article.articledetails.each do |articledetail| %>
     <div class="row no-gutters">
       <div class="card-body">
-        <p class="h5 font-weight-bold text-monospace mb-2"><%= articledetail.title %></p>
+        <p class="h5 font-weight-bold text-monospace mb-2">* <%= articledetail.title %></p>
         <div class="card-text text-justify"><%= articledetail.content %></div>
       </div>     
     </div>
