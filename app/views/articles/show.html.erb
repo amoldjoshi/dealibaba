@@ -5,7 +5,7 @@
 <div class = "col-md-9">
   <div class="card rounded ml-2 mb-3">
     <div class="card-header text-center">
-        <p class="h4 text-center font-weight-bold mb-2"><%= @article.title %></p>
+        <p class="h3 text-center font-weight-bold mb-2"><%= @article.title %></p>
         <p class="h6 font-italic"><%= @article.writer %>
         <%= @article.created_at.strftime("%b, %Y") %></p>
     </div>
@@ -15,12 +15,14 @@
     </div><!--end <div class="card ml-2 mb-3"> -->
  
   <div class="articledetail-box">
-    <p class="h6 font-weight-bold text-monospace mt-2 ml-2 mb-2">Following are the factors discussed in this article.</p>
+    <div class="container">
+    <p class="h5 font-weight-bold text-monospace mt-2 ml-2 mb-2"><u>Things to consider:</u></p>
     <% @article.articledetails.each do |articledetail| %>
       <ul>
-        <li class="h6 font-weight-bold text-monospace ml-2 mb-2"><%= articledetail.title %></li>
+        <li class="h5 font-weight-bold text-monospace ml-2 mb-2"><%= articledetail.title %></li>
       </ul>
     <% end %>
+    </div>
   </div>
 
   <div class="card rounded ml-2 mb-3">
@@ -57,7 +59,7 @@
 
   <div class="articledetail-conclusion">
     <div class="container">
-      <p class="h6 font-weight-bold text-monospace mt-2 ml-2 mb-2">This is recommendation / summary:</p>
+      <p class="h6 font-weight-bold text-monospace mt-2 ml-2 mb-2"><u>Summary / Recommendation:</u></p>
       <div class="text-justify mb-2"><%= @article.conclusion %></div>
       <div class="dropdown-divider"></div>
    	  <div>
