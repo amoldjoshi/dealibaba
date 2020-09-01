@@ -6,9 +6,11 @@
   <div class="card rounded ml-2 mb-3">
     <div class="card-header text-center">
       <picture><%= image_tag(@article.photo, class: "card-img-top rounded") %></picture>
-        <p class="h3 text-center font-weight-bold mb-2"><%= @article.title %></p>
+      <div class="card-img-overlay">
+        <P class="h3 text-center font-weight-bold mb-2"><%= @article.title %></p>
         <p class="h6 font-italic"><%= @article.writer %>
         <%= @article.created_at.strftime("%b, %Y") %></p>
+      </div>
     </div>
   </div>
       <div class="container mt-2 ml-2 mb-2">
