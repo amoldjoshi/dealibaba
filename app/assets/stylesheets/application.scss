@@ -214,3 +214,10 @@ tr:hover{
   background: #FFFFB7;
   margin-left: 10px;
  }
+
+///* Amol added for article image overlay */
+  .mid-left { 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+  } 
