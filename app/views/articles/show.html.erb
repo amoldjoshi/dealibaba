@@ -4,11 +4,11 @@
 <div class="row justify-content-center">
 <div class = "col-md-9">
   <div class="card rounded ml-2 mb-3">
-    <div class="card-header position-absolute mid-left">
+    <div class="card-header">
       <picture><%= image_tag(@article.photo, class: "card-img-top rounded") %></picture>
       <div class="card-img-overlay">
-        <P class="h3 font-weight-bold mb-2"><%= @article.title %></p>
-        <p class="h6 font-italic"><%= @article.writer %>
+        <P class="h3 position-absolute mid-left font-weight-bold mb-2"><%= @article.title %></p>
+        <p class="h6 position-absolute mid-left font-italic"><%= @article.writer %>
         <%= @article.created_at.strftime("%b, %Y") %></p>
       </div>
     </div>
