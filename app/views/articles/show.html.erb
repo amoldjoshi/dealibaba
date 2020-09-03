@@ -57,11 +57,11 @@
                 </div>
                 <p class="h6 font-italic"><%= item.created_at.strftime("%b, %Y") %></p>
                 <div class="dropdown-divider"></div>
-                <div  class="row justify-content-left">
+                <div  class="row justify-content-left ml-2">
                   <div class="text-justify"><%= item.itemdescription %></div>
                 </div>
                 <div class="dropdown-divider"></div>
-                <div  class="row justify-content-center">
+                <div  class="row">
                   <p><a class="card-text"><%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-danger btn-md')%></a>
                   <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a></p>
                 </div>
