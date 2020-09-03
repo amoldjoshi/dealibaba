@@ -52,20 +52,20 @@
   		      </div>
   		      <div class="col-md-8">
   			      <div class="card-body">
-  				      <div class="card-text">
-						      <%= item.itemname %>
-						      <%= item.itemdescription %>
-                  <%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-primary btn-sm')%>
-                  <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a>		
-					      </div>
-  			      </div>	
-			      </div>
-		      </div>
-        </div>	
+                <div  class="row"><%= item.itemname %></div>
+                <div class="dropdown-divider"></div>
+                <div  class="row"><%= item.itemdescription %></div>
+                <div class="dropdown-divider"></div>
+                <div  class="row"><%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-primary btn-sm')%>
+                  <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a></div>
+              </div>
+  			    </div>	
+			    </div>
+		    </div>
 	    <% end %>
       <div class="articledetail-conclusion">
         <div class="container">
-          <p class="h5 font-weight-bold text-monospace mt-2 ml-2 mb-2"><u>Summary / Recommendation:</u></p>
+          <p class="h5 font-weight-bold text-monospace mt-2 ml-2 mb-2"><u>Key Takeaways:</u></p>
           <div class="text-justify mb-2"><%= @article.conclusion %></div>
           <div class="dropdown-divider"></div>
    	    <div>
