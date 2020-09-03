@@ -62,8 +62,8 @@
                 </div>
                 <div class="dropdown-divider"></div>
                 <div  class="row justify-content-between">
-                  <p><a class="card-text"><%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-danger btn-md')%></a>
-                  <a class="float-right"><font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></a></p>
+                  <p><%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-danger btn-md')%>
+                  <font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></p>
                 </div>
               </div>
   			    </div>	
