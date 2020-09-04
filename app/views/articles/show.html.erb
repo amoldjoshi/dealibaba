@@ -61,9 +61,12 @@
                   <div class="text-justify"><%= item.itemdescription %></div>
                 </div>
                 <div class="dropdown-divider"></div>
-                <div  class="row justify-content-between">
-                  <p><%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-danger btn-md')%>
-                  <font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></p>
+                <div  class="row">
+                  <div class="col-md-1">
+                  <%=  link_to( 'Product Link' , url_with_protocol(item.itemurl),:target => :blank, :class => 'btn btn-danger btn-md')%>
+                  </div>
+                  <div class="col-md-5">
+                  <font size="4" color = #0000FF><%= number_to_currency(item.itemprice, :unit => "@$")%></font></p></div>
                 </div>
               </div>
   			    </div>	
