@@ -1,7 +1,5 @@
- <div class="container-fluid">
-<div class="row">
- <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <!--<a class="navbar-brand" href="#">DEalibaba.com</a>-->
+<div class="container-fluid">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div>
       <% logo = image_tag("wowmewiththatlogo1.png", :alt => "wowmewiththat.com") %>
       <%= link_to logo, root_path %>
@@ -81,30 +79,4 @@
       </ul>
     </div>
   </nav>
-</div>
-<div class="row">
-      <nav class="navbar navbar-expand-lg navbar-light text-center" style="background-color: #D0FBE7;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
- 
-    <a><%=  link_to( "Weekly Adds",weeklyadds_path, :class => 'btn btn-outline-info btn-block')%></a>
-
-    <a><%=  link_to( "Associates",associates_path, :class => 'btn btn-outline-info btn-block')%></a>
-
-    <a><%=  link_to( "All Innovations",products_path, :class => 'btn btn-outline-info btn-block')%></a>
-
-    <a><%=  link_to( "Kids" ,products_path(productcategory: 'Kids'), :class => 'btn btn-outline-info btn-block')%></a>
-  
-    <a><%=  link_to( "Hers" ,products_path(productcategory: 'Hers'), :class => 'btn btn-outline-info btn-block')%></a>
-
-    <a><%=  link_to( "His" ,products_path(productcategory: 'His'), :class => 'btn btn-outline-info btn-block')%></a>
- 
-    <a><%=  link_to( "Gadgets" ,products_path(productcategory: 'Gadgets'), :class => 'btn btn-outline-info btn-block')%></a>
-  </div>
-  </nav>
-</div>
 </div>
