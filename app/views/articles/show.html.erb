@@ -23,16 +23,13 @@
       </div>
  
       <div class="articledetail-box">
-        <div class="container mt-2 mb-2">
-          <div class="container mt-2 mb-2">
+        <div class="mt-2 mb-2">
           <p class="h5 font-weight-bold"><u>Highlights:</u></p>
             <% @article.articledetails.each do |articledetail| %>
               <ul>
                 <li class="h5 font-weight-bold text-monospace ml-2 mb-2"><%= articledetail.title %></li>
-              
               </ul>
             <% end %>
-          </div>
         </div>
       </div>
 
