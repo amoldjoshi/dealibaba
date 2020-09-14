@@ -43,6 +43,13 @@
         </div>
         <% end %>
       </div> <!--end <div class="container rounded ml-2 mb-3"> -->
+
+      <div class="articlequote-box">
+        <div class="container p-2">
+          <p class="h5 font-italic"><%= @article.famousquote %> </p>
+          <p class="h6 font-italic">-<%= @article.famousquoteby %> </p>
+        </div>
+      </div>
  
       <% @article.items.each do |item| %>
         <div class="card rounded ml-2 mt-2 mb-3">
