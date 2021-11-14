@@ -4,7 +4,7 @@
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>-->
     <div class="row mb-2 justify-content-center">
       <% @dealers.each do |dealer| %>
-        <% if dealer.dealertype == 4 %>
+        <% if dealer.dealertype == 5 %>
             <div class="card border-0 rounded bg-light mb-3 mr-5" style="max-width: 15rem; max-height: 30rem;">
               <div class="card-header">
                 <h4 class = "text-center font-weight-bold"><%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %></h4>

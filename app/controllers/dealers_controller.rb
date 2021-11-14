@@ -29,12 +29,12 @@ class DealersController < ApplicationController
     @dealers = Dealer.all.order(:dealerid)
   end
 
-# GET /products/weeklyadds (dealerid4)
+# GET /products/blackfriday (dealerid4)
   def blackfriday
     @dealers = Dealer.all.order(:dealerid)
   end
 
-# GET /products/weeklyadds (dealerid4)
+# GET /products/associates (dealerid5)
   def associates
     @dealers = Dealer.all.order(:dealerid)
   end
