@@ -1,27 +1,23 @@
 <%- model_class = Dealer -%>
 
-<div class="container-fluid">
+<div class="container ">
   <!--<div class="page-header"><h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>-->
-  <!--<h1> Deal Finder: weekly papers.</h1>-->
     <div class="row mb-2 justify-content-center">
       <% @dealers.each do |dealer| %>
-        <div class="col-md-2">
-          <% if dealer.dealertype == 4 %>
-            <div class="card border-primary bg-light mb-2" style="max-width: 16rem;">
-              <div class="card-header"><h4>
-                <%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %></h4>
-              </div>
+        <% if dealer.dealertype == 4 %>
+            <div class="card border-0 rounded bg-light mb-3 mr-5" style="max-width: 15rem; max-height: 30rem;">
+              <div class="card-header">
+                <h4 class = "text-center font-weight-bold"><%= link_to(dealer.dealername, url_with_protocol(dealer.dealerurl),:target => :blank) %></h4>
+              </div><!--end card header -->
               <div class="card-body"> 
-                <picture><%= image_tag(dealer.logo, class: 'fit-logo') %></picture>
+                <picture><%= image_tag(dealer.logo, class: 'fit-picture') %></picture>
                 <div class="dropdown-divider"></div>
-                <p class="card-text"><%= dealer.dealercategory %> </p>
-              </div>
+                <h6 class = "text-center font-weight-bold"><%= dealer.dealercategory %> </h6>
+              </div><!--end card body -->
               <div class="card-footer">
-                <p>
-                  <a class="card-text"><%=  link_to('Lets Go!', url_with_protocol(dealer.dealerurl),:target => :blank, :class => 'btn btn-warning')%></a>
-                </p>
-              </div>
-            </div>
+                <p class="text-center font-weight-bold"><%=  link_to('Lets Go!', url_with_protocol(dealer.dealerurl),:target => :blank, :class => 'btn btn-warning')%></p>
+              </div><!--end card footer -->
+            </div><!--end card -->
             <div>
               <% if can? :update, dealer %>
                 <%= link_to 'Show', dealer %> ||
@@ -29,9 +25,8 @@
                 <%= link_to 'Destroy', dealer, method: :delete, data: { confirm: 'Are you sure?' } %>||
                 <%= link_to 'New dealer', new_dealer_path %>
               <%end%>
-            </div>
-          <% end %>
-        </div>
+            </div><!--end if can -->
+        <% end %>
       <% end %>
+    </div><!--end row-->
   </div><!--container-fluid-->
-</div>
