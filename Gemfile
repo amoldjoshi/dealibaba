@@ -33,14 +33,14 @@ gem 'tether-rails', '~> 1.4'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 #Amol added the cmment for the gemfile from the golfcourse westchester.
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 #----end
 
 #Amol added following gems.....
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem "aws-sdk-s3", require: false
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 #---------
 
