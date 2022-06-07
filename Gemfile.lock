@@ -762,6 +762,7 @@ GEM
     aws-sigv2 (1.0.1)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
+    bcrypt (3.1.12)
     bcrypt (3.1.12-x64-mingw32)
     better_errors (2.5.1)
       coderay (>= 1.0.0)
@@ -811,6 +812,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.8.0)
     execjs (2.7.0)
+    ffi (1.10.0)
     ffi (1.10.0-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -823,7 +825,7 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -844,12 +846,16 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
+    msgpack (1.2.9)
     msgpack (1.2.9-x64-mingw32)
     multi_json (1.13.1)
     nio4r (2.3.1)
+    nokogiri (1.10.2)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.2-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pg (1.1.4)
     pg (1.1.4-x64-mingw32)
     popper_js (1.14.5)
     public_suffix (3.0.3)
@@ -956,6 +962,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   aws-sdk (~> 3.0, >= 3.0.1)
